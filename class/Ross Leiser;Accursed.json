@@ -831,11 +831,7 @@
 						{
 							"type": "entries",
 							"name": "Consolidating Jinx",
-							"prerequisite": [
-								{
-									"other": "Swift Jinx"
-								}
-							],
+							"prerequisite": "Swift Jinx",
 							"entries": [
 								"When a creature makes a Wisdom saving throw against your Jinx, it has disadvantage on the saving throw if it was previously the target of your Jinx this turn."
 							]
@@ -843,11 +839,7 @@
 						{
 							"type": "entries",
 							"name": "Deadly Bane",
-							"prerequisite": [
-								{
-									"other": "Hostile Bane"
-								}
-							],
+							"prerequisite": "Hostile Bane",
 							"entries": [
 								"You lose the benefits of your Hostile Bane. Instead, whenever you hit a creature with an attack during your turn, you can cause the attack to deal additional necrotic damage equal to your Intelligence modifier (minimum 1)."
 							]
@@ -855,11 +847,7 @@
 						{
 							"type": "entries",
 							"name": "Hex Armor",
-							"prerequisite": [
-								{
-									"other": "Protective Hex"
-								}
-							],
+							"prerequisite": "Protective Hex",
 							"entries": [
 								"While you're wearing light, medium, or no armor, any damage you take is reduced by an amount equal to half your proficiency bonus."
 							]
@@ -867,11 +855,7 @@
 						{
 							"type": "entries",
 							"name": "Muffling Imprecation",
-							"prerequisite": [
-								{
-									"other": "Enshrouding Imprecation"
-								}
-							],
+							"prerequisite": "Enshrouding Imprecation",
 							"entries": [
 								"While you're in dim light or darkness, you can ignore the verbal components of your accursed spells."
 							]
@@ -879,11 +863,7 @@
 						{
 							"type": "entries",
 							"name": "Transferring Affliction",
-							"prerequisite": [
-								{
-									"other": "Fecund Affliction"
-								}
-							],
+							"prerequisite": "Fecund Affliction",
 							"entries": [
 								"When a creature fails its saving throw against your Afflict, you can choose not to suffer the chosen ailment's effects for the duration."
 							]
@@ -1020,11 +1000,7 @@
 						{
 							"type": "entries",
 							"name": "Clandestine Imprecation",
-							"prerequisite": [
-								{
-									"other": "Muffling Imprecation"
-								}
-							],
+							"prerequisite": "Muffling Imprecation",
 							"entries": [
 								"While you're in dim light or darkness, you can Hide as a bonus action on your turn.",
 								"Additionally, if you're hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
@@ -1033,11 +1009,7 @@
 						{
 							"type": "entries",
 							"name": "Crippling Jinx",
-							"prerequisite": [
-								{
-									"other": "Consolidating Jinx"
-								}
-							],
+							"prerequisite": "Consolidating Jinx",
 							"entries": [
 								"When a creature fails its saving throw against your Jinx, you can choose instead to give it disadvantage on the next saving throw it makes using the chosen ability within the next minute.",
 								"Once you use this metamorphosis on a creature, you must finish a long rest before you can use it on that creature again."
@@ -1046,11 +1018,7 @@
 						{
 							"type": "entries",
 							"name": "Doubling Jinx",
-							"prerequisite": [
-								{
-									"other": "Consolidating Jinx"
-								}
-							],
+							"prerequisite": "Consolidating Jinx",
 							"entries": [
 								"When you use your Jinx, you can target a second creature within range. You can choose a different ability for each target."
 							]
@@ -1058,11 +1026,7 @@
 						{
 							"type": "entries",
 							"name": "Explosive Bane",
-							"prerequisite": [
-								{
-									"other": "Deadly Bane"
-								}
-							],
+							"prerequisite": "Deadly Bane",
 							"entries": [
 								"Once during each of your turns when you hit a creature with an attack, you can cause the attack to deal an additional {@damage 1d10} necrotic damage. When you use this metamorphosis, you can also choose to expend a spell slot to cause the attack to deal an additional {@damage 1d10} necrotic damage per level of the expended spell slot."
 							]
@@ -1070,11 +1034,7 @@
 						{
 							"type": "entries",
 							"name": "Hex Aura",
-							"prerequisite": [
-								{
-									"other": "Hex Armor"
-								}
-							],
+							"prerequisite": "Hex Armor",
 							"entries": [
 								"While you're wearing light, medium, or no armor, when an attacker you can see within 30 feet of you hits you with an attack, you can use your reaction to cast {@spell hex} on that creature, without expending a spell slot. When you cast the spell this way, the spell ends early if the target drops to 0 hit points, or if you use this ability again."
 							]
@@ -1082,11 +1042,7 @@
 						{
 							"type": "entries",
 							"name": "Prolific Affliction",
-							"prerequisite": [
-								{
-									"other": "Transferring Affliction"
-								}
-							],
+							"prerequisite": "Transferring Affliction",
 							"entries": [
 								"When you spend a spell slot of 2nd-level or higher to use your Afflict, instead of increasing the effect's duration, you can choose an additional target for each slot level above 1st."
 							]
@@ -1094,11 +1050,7 @@
 						{
 							"type": "entries",
 							"name": "Shielding Hex",
-							"prerequisite": [
-								{
-									"other": "Hex Armor"
-								}
-							],
+							"prerequisite": "Hex Armor",
 							"entries": [
 								"While you're wearing light, medium, or no armor, when an attacker you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
 							]
@@ -1106,11 +1058,7 @@
 						{
 							"type": "entries",
 							"name": "Umbral Imprecation",
-							"prerequisite": [
-								{
-									"other": "Muffling Imprecation"
-								}
-							],
+							"prerequisite": "Muffling Imprecation",
 							"entries": [
 								"You have darkvision to a range of 60 feet. If you already have darkvision, its range instead increases by 30 feet. Magical darkness doesn't impede your darkvision.",
 								"Additionally, you can cast darkness once, without expending a spell slot, and regain the ability to do so when you finish a long rest."
@@ -1119,11 +1067,7 @@
 						{
 							"type": "entries",
 							"name": "Vengeful Bane",
-							"prerequisite": [
-								{
-									"other": "Deadly Bane"
-								}
-							],
+							"prerequisite": "Deadly Bane",
 							"entries": [
 								"When a creature you can see within the range of a weapon you're holding causes you to take damage, you can use your reaction to make a weapon attack against that creature. If the attack hits, it deals additional necrotic damage equal to your curse ability modifier."
 							]
@@ -1131,11 +1075,7 @@
 						{
 							"type": "entries",
 							"name": "Vile Affliction",
-							"prerequisite": [
-								{
-									"other": "Transferring Affliction"
-								}
-							],
+							"prerequisite": "Transferring Affliction",
 							"entries": [
 								"You can use your Afflict as a bonus action on your turn.",
 								"Additionally, when you use your Afflict, you can choose any number of your ailments. If the creature fails its saving throw, it suffers each of your chosen ailments for the duration, and you can choose not to suffer any number of the chosen ailments' effects for the duration."
