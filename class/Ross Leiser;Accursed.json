@@ -217,11 +217,11 @@
 				{
 					"title": "Spell Slots per Spell Level",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Accursed}",
-						"{@filter 2nd|spells|level=2|class=Accursed}",
-						"{@filter 3rd|spells|level=3|class=Accursed}",
-						"{@filter 4th|spells|level=4|class=Accursed}",
-						"{@filter 5th|spells|level=5|class=Accursed}"
+						"{@filter 1st|spells|level=1|class=Accursed (ACD)}",
+						"{@filter 2nd|spells|level=2|class=Accursed (ACD)}",
+						"{@filter 3rd|spells|level=3|class=Accursed (ACD)}",
+						"{@filter 4th|spells|level=4|class=Accursed (ACD)}",
+						"{@filter 5th|spells|level=5|class=Accursed (ACD)}"
 					],
 					"rows": [
 						[
