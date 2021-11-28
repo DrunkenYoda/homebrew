@@ -2870,10 +2870,7 @@
 							"freedom of movement"
 						],
 						"17": [
-							{
-								"name":"far step",
-								"source":"xge"
-							}
+							"farestep|XGE"
 						]
 					}
 				}
@@ -2901,10 +2898,7 @@
 							"earth tremor"
 						],
 						"5": [
-							{
-								"name":"earthbind",
-								"source":"XGE"
-							}
+							"earthbind|xge"
 						],
 						"9": [
 							"meld into stone"
@@ -2939,10 +2933,7 @@
 				{
 					"prepared": {
 						"2": [
-							{
-								"name":"catapult",
-								"source":"XGE"
-							}
+							"catapul|xge"
 						],
 						"5": [
 							"spiritual weapon"
@@ -2991,10 +2982,7 @@
 							"staggering smite"
 						],
 						"17": [
-							{
-								"name":"steel wind strike",
-								"source":"XGE"
-							}
+							"steelwindstrike|xge"
 						]
 					}
 				}
