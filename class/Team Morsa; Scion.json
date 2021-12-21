@@ -33,7 +33,7 @@
 				"int"
 			],
 			"spellcastingAbility": "int",
-			"casterProgression": "1/2",
+			"casterProgression": "pact",
 			"cantripProgression": [
 				0,
 				2,
@@ -500,7 +500,7 @@
 			"classFeatures": [
 				"Sacred Knowledge|Scion|Scion|1",
 				"Fighting Style|Scion|Scion|1",
-				"Pact Magic|Scion|Scion|2",
+				"Planar Power|Scion|Scion|2",
 				"Sacred Sigil|Scion|Scion|2",
 				"Empower Sigil|Scion|Scion|2",
 				"Divine Talent|Scion|Scion|3",
@@ -519,14 +519,14 @@
 				"Divine Weapon|Scion|Scion|10",
 				"Empower Sigil (3)|Scion|Scion|11",
 				"Ability Score Improvement|Scion|Scion|12",
-				"Mystic Arcanum (4th level)|Scion|Scion|13",
+				"Planar Arcanum (4th level)|Scion|Scion|13",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|14",
 					"gainSubclassFeature": true
 				},
 				"Empower Sigil (4)|Scion|Scion|15",
 				"Ability Score Improvement|Scion|Scion|16",
-				"Mystic Arcanum (5th level)|Scion|Scion|17",
+				"Planar Arcanum (5th level)|Scion|Scion|17",
 				"Divine Succor|Scion|Scion|18",
 				"Ability Score Improvement|Scion|Scion|19",
 				{
@@ -902,7 +902,7 @@
 			]
 		},
 		{
-			"name": "Pact Magic",
+			"name": "Planar Power",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1212,7 +1212,7 @@
 			]
 		},
 		{
-			"name": "Mystic Arcanum (4th level)",
+			"name": "Planar Arcanum (4th level)",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1256,7 +1256,7 @@
 			]
 		},
 		{
-			"name": "Mystic Arcanum (5th level)",
+			"name": "Planar Arcanum (5th level)",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
