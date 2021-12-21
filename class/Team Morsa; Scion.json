@@ -176,7 +176,6 @@
 					"colLabels": [
 						"Sacred Sigils",
 						"Sigil Damage",
-						"{@filter Sigil Powers|optionalfeatures|feature type=Sigil Powers}",
 						"{@filter Cantrips Known|spells|level=0|class=Scion (SCN)}",
 						"{@filter Memorized Spells|spells|class=Scion (SCN)}",
 						"Spell Slots",
@@ -184,7 +183,6 @@
 					],
 					"rows": [
 						[
-							0,
 							0,
 							0,
 							0,
@@ -203,7 +201,6 @@
 									}
 								]
 							},
-							1,
 							2,
 							1,
 							1,
@@ -220,7 +217,6 @@
 									}
 								]
 							},
-							1,
 							2,
 							2,
 							1,
@@ -237,7 +233,6 @@
 									}
 								]
 							},
-							1,
 							2,
 							2,
 							2,
@@ -254,7 +249,6 @@
 									}
 								]
 							},
-							1,
 							2,
 							3,
 							2,
@@ -272,7 +266,6 @@
 								]
 							},
 							2,
-							2,
 							3,
 							2,
 							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
@@ -288,7 +281,6 @@
 									}
 								]
 							},
-							2,
 							2,
 							4,
 							2,
@@ -306,7 +298,6 @@
 								]
 							},
 							2,
-							2,
 							4,
 							2,
 							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
@@ -322,7 +313,6 @@
 									}
 								]
 							},
-							2,
 							2,
 							5,
 							2,
@@ -339,7 +329,6 @@
 									}
 								]
 							},
-							2,
 							2,
 							5,
 							2,
@@ -356,7 +345,6 @@
 									}
 								]
 							},
-							3,
 							3,
 							6,
 							2,
@@ -374,7 +362,6 @@
 								]
 							},
 							3,
-							3,
 							6,
 							2,
 							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
@@ -390,7 +377,6 @@
 									}
 								]
 							},
-							3,
 							3,
 							7,
 							3,
@@ -408,7 +394,6 @@
 								]
 							},
 							3,
-							3,
 							7,
 							3,
 							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
@@ -424,7 +409,6 @@
 									}
 								]
 							},
-							4,
 							3,
 							8,
 							3,
@@ -442,7 +426,6 @@
 								]
 							},
 							4,
-							4,
 							8,
 							3,
 							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
@@ -459,6 +442,21 @@
 								]
 							},
 							4,
+							9,
+							3,
+							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+						],
+						[
+							6,
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 10
+									}
+								]
+							},
 							4,
 							9,
 							3,
@@ -476,7 +474,6 @@
 								]
 							},
 							4,
-							4,
 							9,
 							3,
 							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
@@ -492,24 +489,6 @@
 									}
 								]
 							},
-							4,
-							4,
-							9,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
-						],
-						[
-							6,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 10
-									}
-								]
-							},
-							4,
 							4,
 							9,
 							3,
@@ -531,18 +510,21 @@
 				},
 				"Ability Score Improvement|Scion|Scion|4",
 				"Extra Attack|Scion|Scion|5",
+				"Empower Sigil (2)|Scion|Scion|6",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|7",
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Scion|Scion|8",
 				"Divine Weapon|Scion|Scion|10",
+				"Empower Sigil (3)|Scion|Scion|11",
 				"Ability Score Improvement|Scion|Scion|12",
+				"Mystic Arcanum (4th level)|Scion|Scion|13",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|14",
 					"gainSubclassFeature": true
 				},
-				"Mystic Arcanum (4th level)|Scion|Scion|13",
+				"Empower Sigil (4)|Scion|Scion|15",
 				"Ability Score Improvement|Scion|Scion|16",
 				"Mystic Arcanum (5th level)|Scion|Scion|17",
 				"Divine Succor|Scion|Scion|18",
@@ -1070,7 +1052,7 @@
 			"level": 2,
 			"entries": [
 				"Your time studying the power wielded by the gods along along with arcane formulas has helped you learn how to empower your sigils making them deadlier.",
-				"When you reach 2nd level, you gain one sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}. When you gain certain scion levels, you gain additional powers of your choice, as shown in the Sigil Powers column of the Scion table.",
+				"When you reach 2nd level, you gain one sigil power of your choice from the list bellow. When you gain certain scion levels, you gain additional powers of your choice at 6th level, 11th Level, and 15th level.",
 				"Additionally, when you gain a level in this class, you can choose one of the powers you know and replace it with another one that you could learn at that level.",
 				"If a sigil power has a level prerequisite, it refers to your level in this class. You can learn the power at the same time that you meet its prerequisites.",
 				"You can use one sigil power at a time and each one once per long rest. If the power requires a saving throw to be made, the DC equals your scion spell save DC.",
@@ -1168,6 +1150,16 @@
 			]
 		},
 		{
+			"name": "Empower Sigil (2)",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"level": 6,
+			"entries": [
+				"When you reach 6th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
+			]
+		},
+		{
 			"name": "Sacred Task Feature",
 			"source": "Scion",
 			"className": "Scion",
@@ -1196,6 +1188,16 @@
 			"level": 10,
 			"entries": [
 				"At 10th level, you mastered the manipulation of the planar power you wield. While you are holding your spell focus in your hand and you use your action to cast a spell, you can make one weapon attack as a bonus action."
+			]
+		},
+		{
+			"name": "Empower Sigil (3)",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"level": 11,
+			"entries": [
+				"When you reach 11th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
 			]
 		},
 		{
@@ -1230,6 +1232,16 @@
 			"level": 14,
 			"entries": [
 				"At 14th level, you gain a feature granted to you by your Sacred Task."
+			]
+		},
+		{
+			"name": "Empower Sigil (4)",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"level": 15,
+			"entries": [
+				"When you reach 15th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
 			]
 		},
 		{
