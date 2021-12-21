@@ -521,7 +521,7 @@
 			"classFeatures": [
 				"Sacred Knowledge|Scion|Scion|1",
 				"Fighting Style|Scion|Scion|1",
-				"Planar Power|Scion|Scion|2",
+				"Pact Magic|Scion|Scion|2",
 				"Sacred Sigil|Scion|Scion|2",
 				"Empower Sigil|Scion|Scion|2",
 				"Divine Talent|Scion|Scion|3",
@@ -542,9 +542,9 @@
 					"classFeature": "Sacred Task feature|Scion|Scion|14",
 					"gainSubclassFeature": true
 				},
-				"Planar Arcanum (4th level)|Scion|Scion|13",
+				"Mystic Arcanum (4th level)|Scion|Scion|13",
 				"Ability Score Improvement|Scion|Scion|16",
-				"Planar Arcanum (5th level)|Scion|Scion|17",
+				"Mystic Arcanum (5th level)|Scion|Scion|17",
 				"Divine Succor|Scion|Scion|18",
 				"Ability Score Improvement|Scion|Scion|19",
 				{
@@ -920,7 +920,7 @@
 			]
 		},
 		{
-			"name": "Planar Power",
+			"name": "Pact Magic",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1274,7 +1274,7 @@
 						],
 						[
 							"Neutral",
-							"{@spell summon draconic spirit|ua2021draconicoptions}"
+							"{@spell summon draconic spirit|ftd}"
 						],
 						[
 							"Evil",
@@ -1477,7 +1477,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Starting at 3rd level, even when you hit a creature sealed by you with ranged weapons you can use your sigil abilities."
+				"Starting at 3rd level, you can use your sigil features when you hit a creature sealed by you with a ranged weapon attack. In addition, you can use your bonus action to take the Dash or Disengage action."
 			]
 		},
 		{
@@ -1550,8 +1550,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you can use your bonus action to see in normal and magical darkness, as well as, {@condition invisible} creatures and objects up to a range of 30 feet. Additionally, while active you gain immunity to the {@condition frightened} condition. This feature lasts a number of rounds equal to your Intelligence modifier. ",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
+				"At 14th level, you can use your bonus action to see in normal and magical darkness, as well as, {@condition invisible} creatures and objects up to a range of 30 feet for 1 minute. Additionally, while active you gain immunity to the {@condition frightened} condition. This feature lasts a number of rounds equal to your Intelligence modifier. "
 			]
 		},
 		{
@@ -1611,8 +1610,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Starting at 3rd level, as part of your {@action attack} action you can make one additional weapon attack.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again."
+				"Starting at 3rd level, a number of times equal to your proficiency bonus per long rest you can make one additional weapon attack when you take the {@action attack} action."
 			]
 		},
 		{
@@ -1744,7 +1742,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"At 3rd level, whenever you finish a long rest you can replace one cantrip you know with another cantrip from the {@filter scion|spells|level=0|class=Scion (SCN)} or {@filter wizard|spells|level=0|class=Wizard} spell list."
+				"At 3rd level, you learn one cantrip of your choice from any {@filter class|spells|level=0}. The chosen cantrip counts as a scion cantrip for you but doesn't count against the number of cantrips known."
 			]
 		},
 		{
