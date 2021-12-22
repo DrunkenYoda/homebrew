@@ -1174,6 +1174,16 @@
 			]
 		},
 		{
+			"name": "Sigil Casting",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"level": 9,
+			"entries": [
+				"Upon reaching 9th level, once per long rest you can ignore the gold cost of writing down {@filter scion spells|spells|class=Scion (SCN)} and spend only 1 minute writing it down. You can only have one such scroll at a time and it lasts until it is used or you create another."
+			]
+		},
+		{
 			"name": "Divine Weapon",
 			"source": "Scion",
 			"className": "Scion",
