@@ -516,6 +516,7 @@
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Scion|Scion|8",
+				"Sigil Casting|Scion|Scion|9",
 				"Divine Weapon|Scion|Scion|10",
 				"Empower Sigil (3)|Scion|Scion|11",
 				"Ability Score Improvement|Scion|Scion|12",
@@ -975,9 +976,8 @@
 									"type": "entries",
 									"name": "Writing Down Spells",
 									"entries": [
-										"Any Scion can have their memorized spells written down in any scroll by spending 1 hour and 50 gp. per level of the spell. In addition to this they must have {@item calligrapher's supplies|phb} and succeed an Intelligence ({@skill Arcana}) skill check against a DC 10 + the spell level.",
-										"Spells written by a scion can only be understood by other scions and used to learn spells not casting. Other spellcasters can't decipher the scrolls even if they use magic.",
-										"For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
+										"Any Scion can have their memorized spells written down in any scroll by spending 1 hour and 50 gp. per level of the spell. In addition to this, the scion must spend a spell slot of the adequate level spend and have Calligrapher's Supplies.",
+										"Spells written by a scion can only be understood by other scions and used to learn or cast spells. Other spellcasters can't decipher the scrolls even if they use magic. To cast a spell from a scroll the scion must follow the rules of using spell scrolls as found on the *Dungeon Masters Guide* page 200.",
 										{
 											"type": "entries",
 											"name": "Replacing Memorized Spells",
@@ -1086,13 +1086,6 @@
 				},
 				{
 					"type": "entries",
-					"name": "Sigil of Retribution",
-					"entries": [
-						"As a reaction to the sealed creature attacking, you can force it to make a Dexterity saving throw. On a failure, it takes a number of d6's equal to the maximum number of times you can use your seals per short rest of the same damage type as your Planar Source."
-					]
-				},
-				{
-					"type": "entries",
 					"name": "Sigil of Spellcraft",
 					"entries": [
 						"The sealed creature gains a penalty to saving throws against spells you cast equal to the maximum number of times you can use your seals per short rest."
@@ -1114,7 +1107,7 @@
 			"classSource": "Scion",
 			"level": 3,
 			"entries": [
-				"At 3rd level, the divine power flowing through you enhances your abilities. Choose one skill or tool proficiency from the scion list, including subclasses. Your proficiency bonus is doubled for any ability check you make that uses the chosen proficiency."
+				"At 3rd level, the divine power flowing through you enhances your abilities. Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill."
 			]
 		},
 		{
@@ -1124,7 +1117,7 @@
 			"classSource": "Scion",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you have graduated from a trainee into a high ranking official of a church. You choose how best you serve your church by selecting either Acolyte, Avenger, Inquisitor or Magus.",
+				"At 3rd level, you have transitioned from a trainee into an official of a church allowing you to choose how you serve it by selecting either Acolyte, Avenger, Inquisitor or Magus.",
 				"Your choice grants you features at 3rd level and again at 7th, 15th level, and 20th."
 			]
 		},
@@ -2301,16 +2294,6 @@
 			],
 			"entries": [
 				"You can replace one of your attacks to force the sealed creature into making a Strength saving throw. On a failure, you can push it up to 15 feet."
-			]
-		},
-		{
-			"name": "Sigil of Retribution",
-			"source": "Scion",
-			"featureType": [
-				"Sigil Power"
-			],
-			"entries": [
-				"As a reaction to the sealed creature attacking, you can force it to make a Dexterity saving throw. On a failure, it takes a number of d6's equal to the maximum number of times you can use your seals per short rest of the same damage type as your Planar Source."
 			]
 		},
 		{
