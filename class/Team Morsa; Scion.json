@@ -33,7 +33,7 @@
 				"int"
 			],
 			"spellcastingAbility": "int",
-			"casterProgression": "pact",
+			"casterProgression": "1/2",
 			"cantripProgression": [
 				0,
 				2,
