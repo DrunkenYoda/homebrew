@@ -2381,7 +2381,7 @@
 			"name": "Sigil of Spellcraft",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
 			],
 			"entries": [
 				"The sealed creature gains a penalty to saving throws against spells you cast equal to the maximum number of times you can use your seals per short rest."
