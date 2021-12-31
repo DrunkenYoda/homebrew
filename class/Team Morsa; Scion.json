@@ -13,7 +13,7 @@
 					"Drunken Yoda"
 				],
 				"url": "https://www.dmsguild.com/product/369229/The-Scion-Class",
-				"version": "2.1",
+				"version": "2.3",
 				"color": "035afc"
 			}
 		],
@@ -33,7 +33,6 @@
 				"int"
 			],
 			"spellcastingAbility": "int",
-			"casterProgression": "1/2",
 			"cantripProgression": [
 				0,
 				2,
@@ -976,8 +975,8 @@
 									"type": "entries",
 									"name": "Writing Down Spells",
 									"entries": [
-										"Any Scion can have their memorized spells written down in any scroll by spending 1 hour and 50 gp. per level of the spell. In addition to this, the scion must spend a spell slot of the adequate level spend and have Calligrapher's Supplies.",
-										"Spells written by a scion can only be understood by other scions and used to learn or cast spells. Other spellcasters can't decipher the scrolls even if they use magic. To cast a spell from a scroll the scion must follow the rules of using spell scrolls as found on the Dungeon Masters Guide page 200.",
+										"Any Scion can have their memorized spells written down in any scroll by spending 1 hour and 50 gp. per level of the spell. In addition to this, the scion must spend a spell slot spend and have Calligrapher's Supplies. If the scion crafts a scroll for a 1st level spell using a 4th level spell slot, the spell is casted at 4th level.",
+										"Spells written by a scion can only be understood by other scions and other spellcasters can't decipher the scrolls even if they use magic. To cast a spell from a scroll the scion must follow the rules of using spell scrolls as found on the *Dungeon Masters Guide* page 200.",
 										{
 											"type": "entries",
 											"name": "Replacing Memorized Spells",
@@ -1051,53 +1050,13 @@
 			"classSource": "Scion",
 			"level": 2,
 			"entries": [
-				"Your time studying the power wielded by the gods along along with arcane formulas has helped you learn how to empower your sigils making them deadlier.",
-				"When you reach 2nd level, you gain one sigil power of your choice from the list bellow. When you gain certain scion levels, you gain additional powers of your choice at 6th level, 11th Level, and 15th level.",
-				"Additionally, when you gain a level in this class, you can choose one of the powers you know and replace it with another one that you could learn at that level.",
-				"If a sigil power has a level prerequisite, it refers to your level in this class. You can learn the power at the same time that you meet its prerequisites.",
-				"You can use one sigil power at a time and each one once per long rest. If the power requires a saving throw to be made, the DC equals your scion spell save DC.",
-				{
-					"type": "entries",
-					"name": "Sigil of Conquest (6th Level or Higher)",
-					"entries": [
-						"You can use your action to make a melee spell attack. On a hit, it takes an amount of damage equal to {@dice 2d8} plus your Intelligence modifier of the same type as your Planar Source. Additionally, the sealed creature must make a Constitution saving throw. On a failure, the creature is knocked {@condition prone} and it's speed is reduced to 0 until the end of your next turn."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sigil of Harm",
-					"entries": [
-						" Whenever you deal sigil damage to the creature, you can deal additional damage equal to your proficiency bonus. The damage dealt is of the type of your Planar Source."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sigil of Protection (6th Level or Higher)",
-					"entries": [
-						"While the creature is sealed, you gain resistance against bludgeoning, piercing, and slashing damage made by the sealed creature."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sigil of Repulsion",
-					"entries": [
-						"You can replace one of your attacks to force the sealed creature into making a Strength saving throw. On a failure, you can push it up to 15 feet."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sigil of Spellcraft",
-					"entries": [
-						"The sealed creature gains a penalty to saving throws against spells you cast equal to the maximum number of times you can use your seals per short rest."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Sigil of Stagnation (15th Level or Higher)",
-					"entries": [
-						"When you place the seal on the creature or as an action, you can force the target into making a Wisdom saving throw. On a failure, the creature is under the effects of the spell {@spell slow} while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell)."
-					]
-				}
+				"Your time studying arcane formulas and the powers you control, has helped you learn how to modify your sigils making them deadlier.",
+				"When you reach 2nd level, you gain one sigil empowerment of your choice. Your sigil empowerment options are detailed on the {@filter Optional Features|optionalfeatures|Feature Type=SE} page. You gain additional empowerments of your choice at 6th level, 11th Level, and 15th level.",
+				"Additionally, when you gain a level in this class, you can choose one of the empowerments you know and replace it with another one that you could learn at that level. ",
+				"When you use your bonus action to place a sacred sigil on a creature, you can chose to use one of your sigil empowerments to make it more threatening.",
+				"If the empowerment requires a saving throw to be made, the DC equals your scion spell save DC.",
+				"All empowerments remain on the creature while it is sealed, unless it is stated otherwise by the empowerment.",
+				"Each sigil empowerment can only be used once per long rest."
 			]
 		},
 		{
@@ -1149,7 +1108,7 @@
 			"classSource": "Scion",
 			"level": 6,
 			"entries": [
-				"When you reach 6th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
+				"When you reach 6th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
 			]
 		},
 		{
@@ -1180,7 +1139,8 @@
 			"classSource": "Scion",
 			"level": 9,
 			"entries": [
-				"Upon reaching 9th level, once per long rest you can ignore the gold cost of writing down {@filter scion spells|spells|class=Scion (SCN)} and spend only 1 minute writing it down. You can only have one such scroll at a time and it lasts until it is used or you create another."
+				"Upon reaching 9th level, once per long rest you can use your knowledge of arcane sigils to ignore all requirements of writing down spells memorized via your Planar Power feature and must spend only 10 minutes writing it down in the form of a sigil.",
+				"You can only have one such scroll at a time and it lasts until it is used or you create another. If the scroll is used to cast the spell, the spell is casted at its lowest level."
 			]
 		},
 		{
@@ -1200,7 +1160,7 @@
 			"classSource": "Scion",
 			"level": 11,
 			"entries": [
-				"When you reach 11th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
+				"When you reach 11th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
 			]
 		},
 		{
@@ -1244,7 +1204,7 @@
 			"classSource": "Scion",
 			"level": 15,
 			"entries": [
-				"When you reach 15th level, you gain one additional sigil power of your choice from the {@filter list bellow|optionalfeatures|Feature Type=Sigil Power}."
+				"When you reach 15th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
 			]
 		},
 		{
@@ -2247,10 +2207,30 @@
 			]
 		},
 		{
+			"name": "Sigil of Bleeding",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"This sigil forces the creature to bleed uncontrollably from any open wound, when the sealed creature is hit with a weapon attack you can use your reaction to force the creature into making a Constitution saving throw. On a failure, the attack becomes a critical hit."
+			]
+		},
+		{
 			"name": "Sigil of Conquest",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
 			],
 			"prerequisite": [
 				{
@@ -2263,24 +2243,75 @@
 				}
 			],
 			"entries": [
-				"You can use your action to make a melee spell attack. On a hit, it takes an amount of damage equal to {@damage 2d8} plus your Intelligence modifier of the same type as your Planar Source. Additionally, the sealed creature must make a Constitution saving throw. On a failure, the creature is knocked {@condition prone} and it's speed is reduced to 0 until the end of your next turn."
+				"While the creature is sealed, you can use your action to make a melee spell attack. On a hit, it takes an amount of damage equal to {@damage 2d8} plus your Intelligence modifier of the same type as your Planar Source. Additionally, the sealed creature must make a Constitution saving throw. On a failure, the creature is knocked {@condition prone} and it's speed is reduced to 0 until the end of your next turn."
+			]
+		},
+		{
+			"name": "Sigil of Exertion",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"entries": [
+				"The target of this sigil starts to suffer from  a magical force that corrodes the muscles. While the creature is sealed, the creature has disadvantage on all attacks it makes and suffers necrotic damage equal to your scion level if it makes more than one attack during it's turn."
+			]
+		},
+		{
+			"name": "Sigil of Fatigue",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"You can force the extraneous weight of your power onto a creature, while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell) you can use your action to force the creature into making a Constitution saving throw. On a failure, the creature gains one level of exhaustion that is removed when the creature is no longer sealed or you lose concentration."
 			]
 		},
 		{
 			"name": "Sigil of Harm",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
 			],
 			"entries": [
-				"Whenever you deal sigil damage to the creature, you can deal additional damage equal to your proficiency bonus. The damage dealt is of the type of your Planar Source."
+				"Your weapons now channel the power of the sigil. Whenever you deal damage to the sealed creature, you deal additional damage equal to half your proficiency bonus (rounded down). The damage dealt is of the type of your Planar Source."
+			]
+		},
+		{
+			"name": "Sigil of Lighting",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Bolts of lightning spark from the seal surrounding your weapon making your attacks more painful. When you use your attack action, you can replace one of your attacks to make a melee spell attack that on a hit forces the target to take {@damage 3d10} plus your Intelligence modifier lightning damage.",
+				"Whether you hit or miss, each creature, other than you, within 10 feet of the sealed creature must make a Dexterity saving throw. Each of these creatures takes {@damage 1d10} plus your Intelligence modifier thunder damage on a failed save."
 			]
 		},
 		{
 			"name": "Sigil of Protection",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
 			],
 			"prerequisite": [
 				{
@@ -2297,13 +2328,53 @@
 			]
 		},
 		{
+			"name": "Sigil of Puppetry",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"This sigil bind the eyes of a creature and becomes susceptible to your commands. You can use your bonus action to force the sealed creature into making a Wisdom saving throw that on a failure, allows you to order the creature into making an attack against another creature within reach. Creatures immune to the {@condition charmed} condition can't be affected by this empowerment."
+			]
+		},
+		{
 			"name": "Sigil of Repulsion",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
 			],
 			"entries": [
 				"You can replace one of your attacks to force the sealed creature into making a Strength saving throw. On a failure, you can push it up to 15 feet."
+			]
+		},
+		{
+			"name": "Sigil of Retribution",
+			"source": "Scion",
+			"featureType": [
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"This sigil binds you and the target in a bond that shares every last bit of pain that it the target deals to you. Whenever the sealed creature deals damage to you, you can spend a reaction to have the sealed creature make a Constitution saving throw. On a failure, the creature takes the same amount of damage dealt to you."
 			]
 		},
 		{
@@ -2320,7 +2391,27 @@
 			"name": "Sigil of Stagnation",
 			"source": "Scion",
 			"featureType": [
-				"Sigil Power"
+				"SE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Scion"
+						}
+					}
+				}
+			],
+			"entries": [
+				"When you place the seal on the creature or as an action, you can force the target into making a Wisdom saving throw. On a failure, the creature is under the effects of the spell {@spell slow} while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell). "
+			]
+		},
+		{
+			"name": "Sigil of Suppression",
+			"source": "Scion",
+			"featureType": [
+				"SE"
 			],
 			"prerequisite": [
 				{
@@ -2333,7 +2424,8 @@
 				}
 			],
 			"entries": [
-				"When you place the seal on the creature or as an action, you can force the target into making a Wisdom saving throw. On a failure, the creature is under the effects of the spell {@spell slow} while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell). "
+				"This powerful sigil blocks spellcasters from using their magic by creating a null field within it. While it is sealed or until you lose your concentration (as if you were concentrating on a spell), the creature is unable to cast spells, use magic items, teleport or maintain concentration on a spell ",
+				"At the start of each of the target's turn, it can repeat the spellcasting ability saving throw. On a success, the creature is no longer under the effects of this power."
 			]
 		}
 	],
