@@ -2344,7 +2344,7 @@
 				}
 			],
 			"entries": [
-				"This sigil bind the eyes of a creature and becomes susceptible to your commands. You can use your bonus action to force the sealed creature into making a Wisdom saving throw that on a failure, allows you to order the creature into making an attack against another creature within reach. Creatures immune to the {@condition charmed} condition can't be affected by this empowerment."
+				"This sigil marks the eyes of a creature and making it susceptible to your commands. You can use your bonus action to force the sealed creature into making a Wisdom saving throw that on a failure, allows you to order the creature into making an attack against another creature within reach. Creatures that can't be {@condition charmed} or don't understand your language are immune this empowerment."
 			]
 		},
 		{
