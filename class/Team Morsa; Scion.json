@@ -2358,7 +2358,7 @@
 			]
 		},
 		{
-			"name": "Sigil of Retribution",
+			"name": "Sigil of Reach",
 			"source": "Scion",
 			"featureType": [
 				"SE"
@@ -2374,7 +2374,7 @@
 				}
 			],
 			"entries": [
-				"This sigil binds you and the target in a bond that shares every last bit of pain that it the target deals to you. Whenever the sealed creature deals damage to you, you can spend a reaction to have the sealed creature make a Constitution saving throw. On a failure, the creature takes the same amount of damage dealt to you."
+				"This sigil creates a bond  between you and the target, this bond allows you to follow the sealed creature amongst great distances. As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see within 5 feet of the sealed target."
 			]
 		},
 		{
