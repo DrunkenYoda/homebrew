@@ -536,31 +536,16 @@
 			],
 			"subclassTitle": "Sacred Task",
 			"classSpells": [
-				{
-					"name": "Booming Blade",
-					"source": "TCE"
-				},
+				"Booming Blade|TCE",
 				"Chill Touch",
-				{
-					"name": "Control Flames",
-					"source": "XGE"
-				},
+				"Control Flames|XGE",
 				"Fire Bolt",
 				"Friends",
-				{
-					"name": "Frostbite",
-					"source": "XGE"
-				},
-				{
-					"name": "Green-Flame Blade",
-					"source": "TCE"
-				},
+				"Frostbite|XGE",
+				"Green-Flame Blade|TCE",
 				"Guidance",
 				"Light",
-				{
-					"name": "Lightning Lure",
-					"source": "TCE"
-				},
+				"Lightning Lure|TCE",
 				"Mage Hand",
 				"Mending",
 				"Message",
@@ -568,101 +553,53 @@
 				"Poison Spray",
 				"Primal Savagery",
 				"Shocking Grasp",
-				{
-					"name": "Sword Burst",
-					"source": "TCE"
-				},
-				{
-					"name": "Thunderclap",
-					"source": "XGE"
-				},
-				{
-					"name": "Vexing Blade",
-					"source": "Scion"
-				},
+				"Sword Burst|TCE",
+				"Thunderclap|XGE",
+				"Vexing Blade|SCN",
 				"Word of Radiance",
 				"Armor of Agathys",
 				"Command",
 				"Cure Wounds",
 				"Detect Evil and Good",
 				"Detect Magic",
-				{
-					"name": "Fire Whip",
-					"source": "Scion"
-				},
-				{
-					"name": "Ice Knife",
-					"source": "XGE"
-				},
+				"Fire Whip|SCN",
+				"Ice Knife|XGE",
 				"Hex",
 				"Illusory Script",
 				"Jump",
 				"Longstrider",
 				"Shield of Faith",
-				{
-					"name": "Sigil of Judgement",
-					"source": "Scion"
-				},
+				"Sigil of Judgement|Scion",
 				"Blur",
 				"Cloud of Daggers",
 				"Darkness",
-				{
-					"name": "Dragon's Breath",
-					"source": "XGE"
-				},
+				"Dragon's Breath|XGE",
 				"Enthrall",
 				"Enhance Ability",
 				"Hold Person",
 				"Misty Step",
-				{
-					"name": "Shadow Blade",
-					"source": "XGE"
-				},
+				"Shadow Blade|XGE",
 				"Silence",
 				"Aura of Vitality",
 				"Counterspell",
 				"Dispel Magic",
-				{
-					"name": "Mist of Damnation",
-					"source": "Scion"
-				},
+				"Mist of Damnation|SCN",
 				"Speak with Dead",
-				{
-					"name": "Thunder Step",
-					"source": "XGE"
-				},
+				"Thunder Step|XGE",
 				"Tongues",
 				"Vampiric Touch",
-				{
-					"name": "Aura of Self-doubt",
-					"source": "Scion"
-				},
+				"Aura of Self-doubt|SCN",
 				"Banishment",
 				"Blight",
 				"Dimension Door",
 				"Evard's Black Tentacles",
-				{
-					"name": "Shadow of Moil",
-					"source": "XGE"
-				},
-				{
-					"name": "Sickening Radiance",
-					"source": "XGE"
-				},
+				"Shadow of Moil|XGE",
+				"Sickening Radiance|XGE",
 				"Contact Other Plane",
-				{
-					"name": "Immolation",
-					"source": "XGE"
-				},
+				"Immolation|XGE",
 				"Legend Lore",
-				{
-					"name": "Mist of Sacrilege",
-					"source": "Scion"
-				},
-				{
-					"name": "Steel Wind Strike",
-					"source": "XGE"
-				},
+				"Mist of Sacrilege|SCN",
+				"Steel Wind Strike|XGE",
 				"Teleportation Circle"
 			],
 			"fluff": [
@@ -2087,7 +2024,7 @@
 		},
 		{
 			"name": "Vexing Blade",
-			"source": "TCE",
+			"source": "Scion",
 			"level": 0,
 			"school": "V",
 			"time": [
