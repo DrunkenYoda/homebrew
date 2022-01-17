@@ -1538,7 +1538,7 @@
 				"Becoming an Inquisitor lets you choose from an expanded list of spells when you learn a scion spell. The following spells are added to the scion spell list for you.",
 				{
 					"type": "table",
-					"caption": "Avenger Spells",
+					"caption": "Inquisitor Spells",
 					"colLabels": [
 						"Scion Level",
 						"Spells"
@@ -1628,7 +1628,7 @@
 			"subclassSource": "Scion",
 			"level": 3,
 			"entries": [
-				"Scions who become Magus forgo some martial prowess to improve their magical talents. While still limited by the amount of power they can harvest from the planes, they have perfected the way they can channel their power."
+				"Scions who become Magus are students of magic seeking to create spells that use up their resources. While still limited by the amount of power they can harvest from the planes, they have focused on creation of effects on creatures."
 			]
 		},
 		{
@@ -1654,7 +1654,12 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"At 3rd level, you learn one cantrip of your choice from any {@filter class|spells|level=0}. The chosen cantrip counts as a scion cantrip for you but doesn't count against the number of cantrips known."
+				"At 3rd level, you have learned how to sheathe your hands in your planar energy to strike a creature with either your fists or by releasing it as a bolt of energy. As an action, you can make either a melee or range spell attack against a creature that you can see within 60 feet of you. On a hit, the creature is dealt {@damage 1d8} damage of your Planar Source type.",
+				"A number of times equal to your proficiency bonus per long rest, you can chose to increase its potency at the risk of sacrificing its stability. You can increase the damage by a number of d8s up to your level in this class. If you do so, you take a penalty to the attack roll equal to twice the number of d8s increased. For example, if you increase damage of the spell by 3d8, you take a penalty to the attack roll of -6.",
+				"This feature counts as spell, the spell level of which is equal to one fourth of your scion level.",
+				"If you score a critical hit on the attack roll, you do not roll the number of dice twice.",
+				"When you use this feature, you can use a spell slot, the damage increases by {@damage 1d8} for each spell slot level spent.",
+				"This feature's damage increases by 1d8 when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
 			]
 		},
 		{
@@ -1682,11 +1687,11 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell arms of hadar}, {@spell magic missile}"
+							"{@spell bless}, {@spell inflict wounds}"
 						],
 						[
 							"5th",
-							"{@spell augury}, {@spell scorching ray}"
+							"{@spell magic weapon}, {@spell scorching ray}"
 						],
 						[
 							"9th",
@@ -1694,11 +1699,11 @@
 						],
 						[
 							"13th",
-							"{@spell ice knife}, {@spell wall of fire}"
+							"{@spell ice knife}, {@spell fly}"
 						],
 						[
 							"17th",
-							"{@spell destructive wave}, {@spell hold monster}"
+							"{@spell destructive wave}, {@spell skill empowerment}"
 						]
 					]
 				}
@@ -1714,7 +1719,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level,   as a bonus action you may consume a seal to regain a spell slot from your Planar Power feature. Once you use this feature, you can't do so until you finish a short or long rest."
+				"Starting at 7th level, you can convert you sigil into an explosion of your Sacred Arcana. When you deal damage to a creature sealed by you with your Sacred Arcana, you can choose to consume the sigi and force all creatures within 10 foot of it into making a Dexterity saving throw against your scion spell save DC. On a failure, the creature is affected by the blast just like the previously sealed creature."
 			]
 		},
 		{
@@ -1727,7 +1732,106 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Beginning at 14th level, you choose one spell from the scion spell list of up to 2nd level. Once per long rest, you can cast the spell at its lowest level without expending a spell slot, this is as long as you have it memorized."
+				"Beginning at 14th level, you have learned enough about magic that you can now create more complex formulas. You can now add any number of effects from the table below to your Sacred Arcana feature.",
+				"To use any effect, you must subtract the penalty to from the attack roll. In addition, you can use a spell slot and forgo the additional damage to instead get a bonus to the attack roll by a number equal to the level of the spell slot used.",
+				"When the damage of your Sacred Arcana feature is dealt, the effect takes place and last for 1 minute. At the end of its turn, the creature can make a saving throw against your scion spell save DC using the ability detailed on the table below, ending the effect on a success.",
+				"If you add multiple effects that use different ability saving throws, you chose one of them.",
+				{
+					"type": "table",
+					"caption": "Effects",
+					"colLabels": [
+						"Penalty",
+						"Effect",
+						"Saving Throw"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"-3",
+							"{@condition blinded}",
+							"Constitution"
+						],
+						[
+							"-2",
+							"Can't concentrate on spells",
+							"Wisdom"
+						],
+						[
+							"-2",
+							"Can't hit points",
+							"Constitution"
+						],
+						[
+							"-2",
+							"Can't take reactions",
+							"Strength"
+						],
+						[
+							"-3",
+							"{@condition deafened}",
+							"Constitution"
+						],
+						[
+							"-1",
+							"Disadvantage on melee attacks",
+							"Strength"
+						],
+						[
+							"-1",
+							"Disadvantage on ranged attacks",
+							"Dexterity"
+						],
+						[
+							"-2",
+							"Disadvantage on a saving throw of your choice",
+							"Charisma"
+						],
+						[
+							"-2",
+							"{@condition frightened}",
+							"Wisdom"
+						],
+						[
+							"-1",
+							"{@condition prone}",
+							"Dexterity"
+						],
+						[
+							"-6",
+							"{@condition paralyzed}",
+							"Intelligence"
+						],
+						[
+							"-4",
+							"{@condition restrained}",
+							"Dexterity"
+						],
+						[
+							"-1",
+							"Speed is reduced to 0",
+							"Dexterity"
+						],
+						[
+							"-5",
+							"{@condition stunned}",
+							"Constitution"
+						],
+						[
+							"-1",
+							"Unable to talk",
+							"Constitution"
+						],
+						[
+							"-1",
+							"Weapon attacks deal half damage (rounded down)",
+							"Strength"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -1740,13 +1844,13 @@
 			"level": 20,
 			"header": 2,
 			"entries": [
-				"At 20th level you have learned how the raw source of magic intertwines with the forces of creation, this understanding allows you to, once per long rest as an action, enter a state of enlightenment for one minute.",
+				"At 20th level you have learned how to manipulate your planar magic allowing you to, once per long rest as an action you can enter a state where you are one with magic for one minute.",
 				{
 					"type": "list",
 					"items": [
-						"You can cast Counterspell at it's lowest level without spending a spell slot.",
-						"You can add your Intelligence modifier to all Saving Throw rolls against spells that target you.",
-						"When you cast a spell that deals a type of damage from the following list, you can change the damage type to one of the other listed types: acid, cold, fire, lightning, poison, thunder."
+						"You can use your sigil features when you deal damage to a creature sealed by you with a spell.",
+						"You take no damage from magic missile and have a bonus equal to your Intelligence modifier to your AC and saving throws against spells that target you.",
+						"When you cast a spell that deals a type of damage the from the following list, listed you can change damage type to one of the other the types: acid, cold, fire, lightning, necrotic, poison, radiant, thunder."
 					]
 				}
 			]
@@ -2501,24 +2605,24 @@
 				{
 					"expanded": {
 						"3": [
-							"arms of hadar",
-							"magic missile"
+							"bless",
+							"inflict wounds"
 						],
 						"5": [
-							"augury",
+							"magic weapon",
 							"scorching ray"
 						],
 						"9": [
-							"arcane eye",
+							"fly",
 							"fireball"
 						],
 						"13": [
 							"ice storm",
-							"wall of fire"
+							"fire shield"
 						],
 						"17": [
 							"destructive wave", 
-							"hold monster"
+							"skill empowerment"
 						]
 					}
 				}
