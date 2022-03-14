@@ -32,7 +32,7 @@
 				"int",
 				"wis"
 			],
-			"spellcastingAbility": "int",
+			"spellcastingAbility": "wis",
 			"casterProgression": "1/2",
 			"spellsKnownProgression": [
 				0,
@@ -134,7 +134,7 @@
 			},
 			"multiclassing": {
 				"requirements": {
-					"int": 13
+					"wis": 13
 				},
 				"proficienciesGained": {
 					"armor": [
@@ -557,8 +557,8 @@
 								{
 									"name": "Quick Build",
 									"entries": [
-										"You can make an accursed quickly by following these suggestions. Your highest score depends greatly on the Accursed Affliction you choose: make Strength your highest ability score for Curse of Lycanthropy and Curse of the Armament, and Dexterity your highest ability score for Curse of Possession. For Curse of Misfortune, make your highest ability score Intelligence.",
-										"If Strength or Dexterity is your highest ability score, your next-highest should be Intelligence, followed by Constitution. Then, choose the folk hero background."
+										"You can make an accursed quickly by following these suggestions. Your highest score depends greatly on the Accursed Affliction you choose: make Strength your highest ability score for Curse of Lycanthropy and Curse of the Armament, and Dexterity your highest ability score for Curse of Possession. For Curse of Misfortune, make your highest ability score Wisdom.",
+										"If Strength or Dexterity is your highest ability score, your next-highest should be Wisdom, followed by Constitution. Then, choose the folk hero background."
 									]
 								}
 							]
@@ -642,19 +642,19 @@
 					"type": "entries",
 					"name": "Spellcasting Ability",
 					"entries": [
-						"Intelligence is your spellcasting ability for your accursed spells, since your ability to cast spells comes from the control you have over your curse's power. You use your curse ability whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an accursed spell you cast and when making an attack roll with one.",
+						"Wisdom is your spellcasting ability for your accursed spells, since your ability to cast spells comes from the control you have over your curse's power. You use your curse ability whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for an accursed spell you cast and when making an attack roll with one.",
 						{
 							"type": "abilityDc",
 							"name": "Spell",
 							"attributes": [
-								"int"
+								"wis"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
 							"attributes": [
-								"int"
+								"wis"
 							]
 						}
 					]
@@ -722,14 +722,14 @@
 							"type": "entries",
 							"name": "Hostile Bane",
 							"entries": [
-								"Once during each of your turns when you hit a creature with an attack, you can cause the attack to deal additional necrotic damage equal to your Intelligence modifier (minimum 1)."
+								"Once during each of your turns when you hit a creature with an attack, you can cause the attack to deal additional necrotic damage equal to your Wisdom modifier (minimum 1)."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Protective Hex",
 							"entries": [
-								"When you're wearing light, medium, or no armor, you can use your Intelligence modifier, instead of your Dexterity modifier, to determine your Armor Class. Your Intelligence is otherwise treated as though it were your Dexterity modifier for the purpose of determining your AC this way."
+								"When you're wearing light, medium, or no armor, you can use your Wisdom modifier, instead of your Dexterity modifier, to determine your Armor Class. Your Wisdom is otherwise treated as though it were your Dexterity modifier for the purpose of determining your AC this way."
 							]
 						},
 						{
@@ -751,7 +751,7 @@
 			"level": 3,
 			"entries": [
 				"Starting at 3rd level, your familiarity with the nature of curses and other dark magics allows you to detect them. As an action, you can send invisible tendrils of your curse to scout for these fell energies. Until the end of your next turn, you know the location of any aberration, fiend, shapechanger, or undead within 60 feet of you that isn't behind total cover. You know the type (aberration, fiend, shapechanger, or undead) of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any cursed objects, as well as spells on the accursed or warlock spell lists that are currently active or have been cast in the radius within the last hour. You don't know what the specific objects or spell effects are, only where they are located.",
-				"You can use this feature a number of times equal to 1 + your Intelligence modifier. You regain all expended uses when you finish a long rest."
+				"You can use this feature a number of times equal to 1 + your Wisdom modifier. You regain all expended uses when you finish a long rest."
 			]
 		},
 		{
@@ -841,7 +841,7 @@
 							"name": "Deadly Bane",
 							"prerequisite": "Hostile Bane",
 							"entries": [
-								"You lose the benefits of your Hostile Bane. Instead, whenever you hit a creature with an attack during your turn, you can cause the attack to deal additional necrotic damage equal to your Intelligence modifier (minimum 1)."
+								"You lose the benefits of your Hostile Bane. Instead, whenever you hit a creature with an attack during your turn, you can cause the attack to deal additional necrotic damage equal to your Wisdom modifier (minimum 1)."
 							]
 						},
 						{
@@ -960,7 +960,7 @@
 						]
 					]
 				},
-				"You can use this feature a number of times equal to your Intelligence modifier (minimum once). You regain all of your expended uses when you finish a long rest.",
+				"You can use this feature a number of times equal to your Wisdom modifier (minimum once). You regain all of your expended uses when you finish a long rest.",
 				"At 20th level, the range of this aura increases to 30 feet, and you regain all of your expended uses of this feature whenever you finish a short or long rest."
 			]
 		},
@@ -1662,7 +1662,7 @@
 						"It is proficient with its withering touch, which is a melee weapon that deals {@damage 1d6} necrotic damage. It uses Charisma, instead of Strength, for the attack and damage rolls of its withering touch. While it's within your body, it can make withering touch attacks against creatures within your reach. When your spirit companion hits a creature with its withering touch, it counts as you hitting the target with an attack for the purpose of your accursed spells.",
 						"It is proficient in any saving throws in which you're proficient.",
 						"It is proficient in two skills of your choice.",
-						"Its Armor Class is equal to 10 + your Intelligence modifier.",
+						"Its Armor Class is equal to 10 + your Wisdom modifier.",
 						"It has a flying speed of 10 feet, and no other speed. It can move through other creatures and objects as if they were difficult terrain. It takes 1 force damage if it ends its turn inside an object."
 					]
 				},
