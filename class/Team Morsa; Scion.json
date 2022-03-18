@@ -1,24 +1,34 @@
 {
-	"$schema": "../schema.json",
+	"$schema": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_schema-fast/homebrew.json",
 	"_meta": {
 		"sources": [
 			{
 				"json": "Scion",
-				"abbreviation": "SCN",
+				"abbreviation": "DDS",
 				"full": "Scion",
 				"authors": [
-					"Team Morsa"
+					"Darel Dominguez"
 				],
 				"convertedBy": [
 					"Drunken Yoda"
 				],
 				"url": "https://www.dmsguild.com/product/369229/The-Scion-Class",
-				"version": "2.3",
-				"color": "035afc"
+				"version": "3.0",
+				"color": "003805"
 			}
 		],
+		"spellSchools": {
+			"S": {
+				"full": "Sigil",
+				"short": "Sig.",
+				"color": "013A4C"
+			}
+		},
+		"optionalFeatureTypes": {
+			"FS:SC": "Fighting Style: Scion"
+		},
 		"dateAdded": 1618689970,
-		"dateLastModified": 1633144797
+		"dateLastModified": 1647555156
 	},
 	"class": [
 		{
@@ -33,50 +43,6 @@
 				"int"
 			],
 			"spellcastingAbility": "int",
-			"cantripProgression": [
-				0,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4
-			],
-			"spellsKnownProgression": [
-				0,
-				1,
-				2,
-				2,
-				3,
-				3,
-				4,
-				4,
-				5,
-				5,
-				6,
-				6,
-				7,
-				7,
-				8,
-				8,
-				9,
-				9,
-				9,
-				9
-			],
 			"startingProficiencies": {
 				"armor": [
 					"{@item shield|phb|shields}"
@@ -92,7 +58,6 @@
 					{
 						"choose": {
 							"from": [
-								"acrobatics",
 								"arcana",
 								"history",
 								"insight",
@@ -100,6 +65,7 @@
 								"nature",
 								"perception",
 								"religion",
+								"survival",
 								"stealth"
 							],
 							"count": 2
@@ -111,9 +77,9 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) a {@item dagger|phb} or (b) an {@item sickle|phb}",
 					"(a) a {@item priest's pack|phb} or (b) an {@item scholar's pack|phb}",
-					"five {@item calligrapher's supplies|phb} and a {@item holy symbol|phb}"
+					"a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}",
+					"{@item calligrapher's supplies|phb} and a {@item holy symbol|phb}"
 				],
 				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
@@ -133,14 +99,6 @@
 					},
 					{
 						"a": [
-							"dagger|phb"
-						],
-						"b": [
-							"sickle|phb"
-						]
-					},
-					{
-						"a": [
 							"priest's pack|phb"
 						],
 						"b": [
@@ -150,7 +108,10 @@
 					{
 						"_": [
 							"calligrapher's supplies|phb",
-							"holy symbol|phb"
+							"holy symbol|phb",
+							"shortbow|phb",
+							"quiver|phb",
+							"arrows (20)|phb|20 arrows"
 						]
 					}
 				]
@@ -173,361 +134,143 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Sacred Sigils",
-						"Sigil Damage",
-						"{@filter Cantrips Known|spells|level=0|class=Scion (SCN)}",
-						"{@filter Memorized Spells|spells|class=Scion (SCN)}",
-						"Spell Slots",
-						"Slot Level"
+						"{@filter Inscribed Sigils|spells|class=Scion (SCN)}",
+						"Sigil Slots",
+						"Sigil Level"
 					],
 					"rows": [
 						[
-							0,
-							0,
-							0,
 							0,
 							0,
 							0
 						],
 						[
 							2,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 4
-									}
-								]
-							},
-							2,
-							1,
-							1,
-							"{@filter 1st|spells|level=1|class=Scion (SCN)}"
-						],
-						[
-							2,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 4
-									}
-								]
-							},
-							2,
-							2,
-							1,
-							"{@filter 1st|spells|level=1|class=Scion (SCN)}"
-						],
-						[
-							2,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 4
-									}
-								]
-							},
-							2,
-							2,
 							2,
 							"{@filter 1st|spells|level=1|class=Scion (SCN)}"
 						],
 						[
 							3,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 4
-									}
-								]
-							},
-							2,
 							3,
-							2,
-							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
+							"{@filter 1st|spells|level=1|class=Scion (SCN)}"
 						],
 						[
 							3,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								]
-							},
-							2,
 							3,
-							2,
-							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
-						],
-						[
-							3,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								]
-							},
-							2,
-							4,
-							2,
-							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
-						],
-						[
-							3,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								]
-							},
-							2,
-							4,
-							2,
-							"{@filter 2nd|spells|level=2|class=Scion (SCN)}"
+							"{@filter 1st|spells|level=1|class=Scion (SCN)}"
 						],
 						[
 							4,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								]
-							},
-							2,
+							4,
+							"{@filter 2nd|spells|level=1;2|class=Scion (SCN)}"
+						],
+						[
+							4,
+							4,
+							"{@filter 2nd|spells|level=1;2|class=Scion (SCN)}"
+						],
+						[
 							5,
-							2,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
-						],
-						[
-							4,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 6
-									}
-								]
-							},
-							2,
 							5,
-							2,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							"{@filter 2nd|spells|level=1;2|class=Scion (SCN)}"
 						],
 						[
-							4,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							3,
+							5,
+							5,
+							"{@filter 2nd|spells|level=1;2|class=Scion (SCN)}"
+						],
+						[
 							6,
-							2,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
-						],
-						[
-							4,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							3,
-							6,
-							2,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
-						],
-						[
 							5,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							3,
+							"{@filter 3rd|spells|level=1;2;3|class=Scion (SCN)}"
+						],
+						[
+							6,
+							5,
+							"{@filter 3rd|spells|level=1;2;3|class=Scion (SCN)}"
+						],
+						[
 							7,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							6,
+							"{@filter 3rd|spells|level=1;2;3|class=Scion (SCN)}"
 						],
 						[
-							5,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							3,
 							7,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							6,
+							"{@filter 3rd|spells|level=1;2;3|class=Scion (SCN)}"
 						],
 						[
-							5,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							3,
 							8,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							6,
+							"{@filter 4th|spells|level=1;2;3;4|class=Scion (SCN)}"
 						],
 						[
-							5,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 8
-									}
-								]
-							},
-							4,
 							8,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							6,
+							"{@filter 4th|spells|level=1;2;3;4|class=Scion (SCN)}"
 						],
 						[
-							6,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 10
-									}
-								]
-							},
-							4,
 							9,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							7,
+							"{@filter 4th|spells|level=1;2;3;4|class=Scion (SCN)}"
 						],
 						[
-							6,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 10
-									}
-								]
-							},
-							4,
 							9,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							7,
+							"{@filter 4th|spells|level=1;2;3;4|class=Scion (SCN)}"
 						],
 						[
-							6,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 10
-									}
-								]
-							},
-							4,
-							9,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							10,
+							7,
+							"{@filter 5th|spells|level=1;2;3;4;5|class=Scion (SCN)}"
 						],
 						[
-							6,
-							{
-								"type": "dice",
-								"toRoll": [
-									{
-										"number": 1,
-										"faces": 10
-									}
-								]
-							},
-							4,
-							9,
-							3,
-							"{@filter 3rd|spells|level=3|class=Scion (SCN)}"
+							10,
+							7,
+							"{@filter 5th|spells|level=1;2;3;4;5|class=Scion (SCN)}"
+						],
+						[
+							11,
+							8,
+							"{@filter 5th|spells|level=1;2;3;4;5|class=Scion (SCN)}"
+						],
+						[
+							11,
+							8,
+							"{@filter 5th|spells|level=5|class=Scion (SCN)}"
 						]
 					]
 				}
 			],
 			"classFeatures": [
-				"Sacred Knowledge|Scion|Scion|1",
+				"Esoteric Knowledge|Scion|Scion|1",
 				"Fighting Style|Scion|Scion|1",
-				"Planar Power|Scion|Scion|2",
 				"Sacred Sigil|Scion|Scion|2",
-				"Empower Sigil|Scion|Scion|2",
-				"Divine Talent|Scion|Scion|3",
+				"Combat Insight|Scion|Scion|2",
+				"Sacred Hunter|Scion|Scion|3",
 				{
 					"classFeature": "Sacred Task|Scion|Scion|3",
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Scion|Scion|4",
 				"Extra Attack|Scion|Scion|5",
-				"Empower Sigil (2)|Scion|Scion|6",
+				"Prime Sigil (1st level)|Scion|Scion|6",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|7",
 					"gainSubclassFeature": true
 				},
 				"Ability Score Improvement|Scion|Scion|8",
-				"Sigil Casting|Scion|Scion|9",
-				"Divine Weapon|Scion|Scion|10",
-				"Empower Sigil (3)|Scion|Scion|11",
+				"Combat Casting|Scion|Scion|10",
+				"Hunter's Instinct|Scion|Scion|11",
 				"Ability Score Improvement|Scion|Scion|12",
-				"Planar Arcanum (4th level)|Scion|Scion|13",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|14",
 					"gainSubclassFeature": true
 				},
-				"Empower Sigil (4)|Scion|Scion|15",
+				"Advanced Esoteric Knowledge|Scion|Scion|15",
 				"Ability Score Improvement|Scion|Scion|16",
-				"Planar Arcanum (5th level)|Scion|Scion|17",
-				"Divine Succor|Scion|Scion|18",
+				"Prime Sigil (2nd level)|Scion|Scion|17",
+				"Hunter's Strike|Scion|Scion|18",
 				"Ability Score Improvement|Scion|Scion|19",
 				{
 					"classFeature": "Sacred Task feature|Scion|Scion|20",
@@ -535,73 +278,6 @@
 				}
 			],
 			"subclassTitle": "Sacred Task",
-			"classSpells": [
-				"Booming Blade|TCE",
-				"Chill Touch",
-				"Control Flames|XGE",
-				"Fire Bolt",
-				"Friends",
-				"Frostbite|XGE",
-				"Green-Flame Blade|TCE",
-				"Guidance",
-				"Light",
-				"Lightning Lure|TCE",
-				"Mage Hand",
-				"Mending",
-				"Message",
-				"Minor Illusion",
-				"Poison Spray",
-				"Primal Savagery",
-				"Shocking Grasp",
-				"Sword Burst|TCE",
-				"Thunderclap|XGE",
-				"Vexing Blade|SCN",
-				"Word of Radiance",
-				"Armor of Agathys",
-				"Command",
-				"Cure Wounds",
-				"Detect Evil and Good",
-				"Detect Magic",
-				"Fire Whip|SCN",
-				"Ice Knife|XGE",
-				"Hex",
-				"Illusory Script",
-				"Jump",
-				"Longstrider",
-				"Shield of Faith",
-				"Sigil of Judgement|Scion",
-				"Blur",
-				"Cloud of Daggers",
-				"Darkness",
-				"Dragon's Breath|XGE",
-				"Enthrall",
-				"Enhance Ability",
-				"Hold Person",
-				"Misty Step",
-				"Shadow Blade|XGE",
-				"Silence",
-				"Aura of Vitality",
-				"Counterspell",
-				"Dispel Magic",
-				"Mist of Damnation|SCN",
-				"Speak with Dead",
-				"Thunder Step|XGE",
-				"Tongues",
-				"Vampiric Touch",
-				"Aura of Self-doubt|SCN",
-				"Banishment",
-				"Blight",
-				"Dimension Door",
-				"Evard's Black Tentacles",
-				"Shadow of Moil|XGE",
-				"Sickening Radiance|XGE",
-				"Contact Other Plane",
-				"Immolation|XGE",
-				"Legend Lore",
-				"Mist of Sacrilege|SCN",
-				"Steel Wind Strike|XGE",
-				"Teleportation Circle"
-			],
 			"fluff": [
 				{
 					"name": "Scion",
@@ -611,28 +287,27 @@
 						"The mammoth devil stands before the adventurers, he has attempted to claim the city for the Nine Hells but this group has managed to thwart his plan time and time again. In the front line stands a man wearing ragged clothes, an old shield, a rusty sword and a relaxed demeanor. As the devil charges violently, the ragged man makes a swift movement where he channels the power used to reshape reality to mark the devil with a blue sigil. When his sword cuts the devil, bolts of radiant energy coming from the sigil charge the rusty old sword.",
 						"Hidden from prying eyes, the high elf stares at her target from the rafters and places a small sigil on him. The moment he sits down, an unseen force pushes him towards the window violently. As the elf drops to the floor with elegance, a dark shadowy blade materializes on her hand. The man has heard the stories and knows that this is his end, those who dare speak ill of the church rarely live long enough to see the sun again.",
 						"Rumors speak that these men and women are born with the divine spark within giving them unrivaled power. Others speak of the divine agents as deadly myths to keep their children in check. Whatever the truth is, they are beings to be reckoned with.",
-						"Scions do not depend on an oath or hours of praying waiting for the gods to bless them, in fact they spend their time training martial techniques, as well as, studying religious texts and the planes hopping to one day tapping into the power wielded by the gods.",
+						"Scions do not depend on an oath or hours of praying waiting for the gods to bless their acts, in fact they spend their time studying martial techniques, as well as, arcane texts hopping to one day understanding the language of magic.",
 						{
-							"name": "An Order of Secrets",
+							"name": "Religious Origins",
 							"entries": [
-								"Sometimes holy knights are of no help, there can be scenarios where there is a need to infiltrate the depths of a cult or even hide in plain sight in a town that has been possessed by dark powers. This is where scions come in, dark secretive agents that hunt that which is unholy putting their life in the line for those who judge them. ",
-								"Scions have a reputation of being ruthless, murderous, blasphemous and even unworthy of the title of divine agents. Most do not care of the stories as this reputation helps them keep the innocent from interfering with their duty, sometimes they go as far as not let some church officials know the truth about them. This forces some priests to treat scions with fear and disdain because of the stories they hear, even if they are high ranking church officials.",
-								"In the end, scions wish to maintain this facade, to the point when they will feed stories for people to share hoping that they stay clear of their task. Some even cross the line of what is morally correct just to keep this illusion."
+								"While most believe scions to be heretics or even evil beings, most of them are highly religious as they believe that what they study is the way gods wield magic and reshape the planes.",
+								"The origins of this order start with ancient archivists who asked the question what are the divine laws of magic? And while searching for the answer, they found that magic has what you might call a language of its own. This language is represented by sigils, complex and detailed symbols that detail the laws of magic and how you you want to manipulate reality. And so, the order of scion was born."
 							]
 						},
 						{
-							"name": "Student of the Planes",
+							"name": "Magic and the Gods",
 							"entries": [
-								"The gods ability to reshape reality leaves pockets of their essence for those with the time, patience and knowledge to use, with that small amount of divine power scions can manipulate the fabric of magic to cast spells.",
-								"Connecting to these pockets of power is easier said than done. First, the scion must enter a state that allows it to connect to the planes of existence and only then seek out remnant pockets of the power wielded by the gods. Afterwards, the scion must have on himself an object that can retain this power to use when needed. As time passes, scions learn to better reserve this energy and have it be more powerful, helping them cast stronger spells.",
-								"Before sleeping they perform a ritual to scavenge the realms for remnants of pure divine power, to do this they need to constantly read and understand the phlogiston, the planes and the cosmos."
+								"Magic is one of the most powerful tools in the world and to wield it wizards translated what are known as the words of creation, or Supernal in some circles, into a set of rules that must be executed to replicate their power.",
+								"But the what are this words of creation? Supernal was a language of the gods. It was a universal language, understandable by any sentient mind and capable to do extremely powerful effects. Sadly, mortals were unable to learn the language completely, having to rely on verbal, somatic and material components to replicate some of their power.",
+								"After centuries of study, scions managed to find a way to use Supernal to create effects that are beyond any spell found in the world. To use this long lost language scions must also write it, down as the written words of Supernal can overcome any material component needed and this is what scions have come to name sigils."
 							]
 						},
 						{
-							"name": "Source of Rumors",
+							"name": "Understanding Magic",
 							"entries": [
-								"What is the power wielded by a scion? That question is what keeps up many people at night. Many speak of them holding divine magic stolen from the gods, others speak of them as being born with the spark of divinity and some even say that their power comes from them connecting to the forces that keep the planes together. While it is not easy to describe their power, it is quite obvious that their rituals take a toll on them. This price can take many forms as mortals were not made to wield this power and yet they still strive to do it. ",
-								"The power of a scion has price and while sometimes it can be mental exhaustion, other time it can be their body breaking down faster than any other person. It might not be known by all but it is quite clear that scions do not live to be old unless they manage to become one with their power, which many never manage to.",
+								"Scions do not have natural spell casting abilities, they depend on learning the long dead language of the gods to become more powerful than ordinary mortals. As such, they constantly study strange texts that contain symbols that seem to make no sense to people who are not scions. Studying these texts give scions the feeling hat one day they could, in theory, reshape reality to their whims.",
+								"The hubris of scions is that they dream of becoming as powerful as the gods themselves, but can you blame them? They were born without any power at all but their curiosity and logical thinking mixed with their knowledge of Supernal, makes them beings to be reckoned with.",
 								{
 									"type": "table",
 									"colLabels": [
@@ -642,27 +317,27 @@
 									"rows": [
 										[
 											"1",
-											"You drank the blood of monsters and divine being to channel their abilities, turning you into a monster."
+											"Wizards have their spell books, you have tons of scrolls with weird symbols on them constantly experimenting with sigils."
 										],
 										[
 											"2",
-											" You perform dark rituals that connect you to fiendish creatures that help you perform heinous acts."
+											"There is connection between magic and divinity, you will unlock it."
 										],
 										[
 											"3",
-											"You were born this way, by a miracle amongst humanity to save them from utter destruction."
+											"You have hundreds of maps to the planes with you as you seek to understand the words of creation."
 										],
 										[
 											"4",
-											"As a baby you were found in a cult's ritual chamber, where you found as the blood child of a divine being."
+											"Divine, primal or arcane magic, they are all formulas and you put all your attention on them."
 										],
 										[
 											"5",
-											"You are the scion of a deity, as such you were brought here to help or judge humanity."
+											"Supernal is the language used to create the multiverse, your studies will unlock its secrets."
 										],
 										[
 											"6",
-											"There level of torture scions will do to get information is limitless and nothing will stand in their path."
+											"Reshaping reality is easy to a god, you must learn what is their secret to doing this."
 										]
 									]
 								}
@@ -671,8 +346,8 @@
 						{
 							"name": "The Price of Power",
 							"entries": [
-								"What is the power wielded by a scion? That question is what keeps up many people at night. Many speak of them holding divine magic stolen from the gods, others speak of them as being born with the spark of divinity and some even say that their power comes from them connecting to the forces that keep the planes together. While it is not easy to describe their power, it is quite obvious that their rituals take a toll on them. This price can take many forms as mortals were not made to wield this power and yet they still strive to do it. ",
-								"The power of a scion has price and while sometimes it can be mental exhaustion, other time it can be their body breaking down faster than any other person. It might not be known by all but it is quite clear that scions do not live to be old unless they manage to become one with their power, which many never manage to.",
+								"While training the mind is of utmost importance for a scion, so is training the body as their tasks constantly put them in deadly danger. To survive, they need to train every day with all manner of weapons until they are accurate with them, to achieve this they are continuously put in the most dangerous types of exercises.",
+								"Scions take this training to heart as even out of the academy they will try to perfect their martial training, the attachment they have towards their preferred weapon gets to a point where a scion does not feel at ease when they are separated it. As such, scions claim that their weapons are part of their religion or even their holy symbol.",
 								{
 									"type": "table",
 									"colLabels": [
@@ -682,37 +357,37 @@
 									"rows": [
 										[
 											"1",
-											"You have dreams of dark futures or items that will lead you on to greater purpose."
+											"Your morning routine consists of fighting with your shadow."
 										],
 										[
 											"2",
-											"Your skin flakes at night causing you the need to every day remove the dead skin and give out bad odor."
+											"Taking care and knowing your weapons is something that is of utmost importance for me."
 										],
 										[
 											"3",
-											"Your body is full or weird markings that are neither arcane or divine."
+											"Your body is full or scars that allow you to withstand the pain of getting injured."
 										],
 										[
 											"4",
-											"You need to drink special potions every night or else you will become very ill."
+											"Your weapon is part of your body, you treat it with respect and can move with it without any problem."
 										],
 										[
 											"5",
-											"While you might seem older than most, you are quite young and no one would believe your real age."
+											"You duel for fun everyday, hoping to learn new things about fighting and looking for ways to improve your style."
 										],
 										[
 											"6",
-											"Your eyes, hair or even your blood is of an unusual color, such as purple."
+											"A daily work out makes the body strong and agile, you must do your daily routine or else you feel like uneasy."
 										]
 									]
 								}
 							]
 						},
 						{
-							"name": "Eternal Students",
+							"name": "Seekers of Knowledge",
 							"entries": [
-								"Scions are academics at heart and as such they enjoy learning new topics and will search for any information they can obtain, but there is always one subject they wish to master of independently of their magical studies. Such topics can vary from scion to scion and while some might be things they wish to hide from others, some can be topics they dabbled on to maintain a rumor and then became entrenched on it. Whatever the reason, books are enjoyed by scions to the point they might even go deep into a long lost ruins only to find a first edition of a book they wished to learn about.",
-								"Why did you get interested in this specific topic? Is it something that keeps your mind of the price of your power? Maybe this is what enticed you to become an adventurer separating yourself from the order. No matter what reasoning you put behind it, scions are always academics first and veteran fighters second.",
+								"Scions are academics first as such, they enjoy studying reading about a variety of topics. They constantly seek obscure information about a subject they wish to master. They constantly carry with them texts that interest them like romance novels, monsters or history. While some read to learn, others seek to unwind from the horrors of the world they face each day. Their interest is such that they might even go deep into a long lost ruin only to find a first edition tome they wished to add into their collection.",
+								"Why did you get interested in this specific topic? Is it something you read for distraction or to learn something? Maybe this is what enticed you to go into wilds.",
 								{
 									"type": "table",
 									"colLabels": [
@@ -722,15 +397,15 @@
 									"rows": [
 										[
 											"1",
-											"You enjoy the literature of romantic novels."
+											"Romantic novels or poetry get your mind out of the problems that you face."
 										],
 										[
 											"2",
-											"Philosophy is something that gets your mind going."
+											"Philosophy and moral debate is something that gets your mind going."
 										],
 										[
 											"3",
-											"Planar theory is what you desire, how does our cosmos work?"
+											"Arcane theory is what you desire, how does magic work and how can it shape the cosmos?"
 										],
 										[
 											"4",
@@ -742,7 +417,7 @@
 										],
 										[
 											"6",
-											"Military strategy will always be needed in the battlefield."
+											" You rather read military strategy and history than any other topic as you its uses in your line of work."
 										]
 									]
 								}
@@ -751,12 +426,12 @@
 						{
 							"name": "Creating a Scion",
 							"entries": [
-								"When creating a scion, think about what deity or church is the one you serve and how you serve this order, this will help you choose a sacred task down the line.",
-								"Once this is done think about your characters motivations. What alignment do you use to fight the enemies of your church? What types of tasks are you sent to by your order? Do the rumors spoken by people affect you? How far are you willing to go to complete a task? What object do you use to gather the power of the gods? Is wielding this power a blasphemy?",
+								"When creating a scion, think about what deity, ideal or church is the one you serve and how you serve this order, this will help you choose a sacred task down the line.",
+								"Once this is done think about your characters motivations. What types of tasks are you sent to by your order? How did you came to learn the words of creation? What weapon do you prefer to use and how do you take care of it? How do you unwind after a long day of hunting down monsters?",
 								{
 									"name": "Quick Build",
 									"entries": [
-										"You can make an Scion quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on the type of weapons you want to use. Your next-highest score should be Intelligence. Second, choose the sage background."
+										"You can make an Scion quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on the type of weapons you want to wield. Your next-highest score should be Intelligence. Second, choose the cloistered scholar background."
 									]
 								}
 							]
@@ -768,13 +443,13 @@
 	],
 	"classFeature": [
 		{
-			"name": "Sacred Knowledge",
+			"name": "Esoteric Knowledge",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 1,
 			"entries": [
-				"At 1st level, you have learned the basics to manipulate the power wielded by the gods found across the planes into spells that all scions are trained to cast with some changes to the arcane formula. You know the {@spell mage armor} and {@spell comprehend languages} spells. These spells count as scion spells for you, but don't count against the number of scion spells you know. Intelligence is your spellcasting ability for these spells.",
+				"At 1st level, you have learned the the basics of the words of creation to facilitate you in casting certain spells with some changes. You know the {@spell mage armor} and {@spell comprehend languages} spells. These spells count as scion spells for you, but don't count against the number of scion spells you know. Intelligence is your spellcasting ability for these spells.",
 				"When you cast {@spell mage armor} on yourself, you can choose between using your Intelligence or Dexterity modifier to calculate the base AC. Moreover, when using {@spell comprehend languages} to read texts it takes you 30 seconds to read one page.",
 				"Once per long rest, you can cast each of these spells without using a spell slot. If you cast either of these spells this way, their duration is doubled."
 			]
@@ -792,112 +467,84 @@
 					"count": 1,
 					"entries": [
 						{
-							"type": "entries",
-							"name": "Dueling",
-							"entries": [
-								"When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Arcane Warrior|Scion"
 						},
 						{
-							"type": "entries",
-							"name": "Great Weapon Fighting",
-							"entries": [
-								"When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Divine Fists|Scion"
 						},
 						{
-							"type": "entries",
-							"name": "Planar Defense",
-							"entries": [
-								"While you are under the effects of the {@spell mage armor} spell, you gain a +1 bonus to AC."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Dueling"
 						},
 						{
-							"type": "entries",
-							"name": "Planar Fists",
-							"entries": [
-								"By spending one hour per long rest, you can fuse a pair of hand wraps with your planar energy. While wearing them your unarmed strikes deal bludgeoning damage equal to {@dice 1d6} plus your Intelligence modifier. You use your choice of your Strength or Dexterity modifier for the attack roll.",
-								"At 6th level, your unarmed strikes are considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Esoteric Defense|Scion"
 						},
 						{
-							"type": "entries",
-							"name": "Planar Warrior",
-							"entries": [
-								"Your time reading basic magic has helped you learn one cantrip of your choice from the {@filter scion spell list|spells|level=0|class=Scion (SCN)}. It counts as scion spell for you, Intelligence is your spellcasting ability for it. Whenever your cantrips deal damage, you can add your Intelligence modifier to the roll."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Great Weapon Fighting"
 						},
 						{
-							"type": "entries",
-							"name": "Two-Weapon Fighting",
-							"entries": [
-								"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
-							]
+							"type": "refOptionalfeature",
+							"optionalfeature": "Two-Weapon Fighting"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Planar Power",
+			"name": "Sacred Sigils",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you have mastered the ritual that helps you gather the power of the gods scattered through out the planes, this plus your knowledge of arcane formulas allow you to cast spells.",
+				"At 2nd level, you have learned how to inscribe divine symbols that empower you in combat.",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "Inscribed Sigils",
 					"entries": [
-						"At 2nd level, the study of magical theory has helped you learn two cantrips of your choice from the {@filter scion spell list|spells|level=0|class=Scion (SCN)}. you learn additional scion cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Scion table.",
-						"When you gain a level in this class, you can replace one of the scion cantrips you know with another cantrip from the scion spell list."
+						"At 2nd level, you can have two inscribed sigils of your choice, these sigils can be found on at the {@filter spells section|spells|class=Scion (SCN)}.",
+						"The Inscribed Sigils column of the Scion table shows the number of sigils you can have fixed in your mind and inscribed at each level. A sigil you choose must be of a level no higher than what's shown in the table's Sigil Level column for your level. When you reach 5th level, for example, you can learn a new sigil, which can be of 1st or 2nd level.",
+						"Additionally, when you gain a level in this class, you can choose one of the sigils you know and replace it with another sigil from the sigil list, which also must be of a level of up to your Sigil Level."
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spell Slots",
+					"name": "Sigil Slots",
 					"entries": [
-						"The Scion table shows how many spell slots you have to cast your scion spells. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your scion spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
-						"For example, when you are 5th level, you have two 2nd-level spell slots. To cast the 1st-level spell {@spell cure wounds}, you must spend one of those slots, and you cast it as a 2nd-level spell."
+						"The Scion table shows how many slots you have to use your sigils of 1st through 5th level and the level of those slots; all of your sigil slots are the same level. You regain all expended sigil slots when you finish a long rest.",
+						"For example, when you are 5th level, you have four 2nd-level sigil slots. To cast the 1st-leve{@spell sigil of harm|Scion} sigil of harm, you must spend one of those slots, and you cast it as a 2nd-level sigil."
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Memorized Spells of 1st Level and Higher",
+					"name": "Casting Spells",
 					"entries": [
-						"You memorized two 1st-level spells of your choice from the scion spell list.",
-						"The Memorized Spells column of the scion table shows when you learn more scion spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 10th level, for example, you learn a new scion spell, which can be 1st, 2nd, or 3rd level. ",
-						"Additionally, when you gain a level in this class, you can't replace your spells, if you wish to do you must follow specific rules (See 'Memorized Spells' sidebar)."
+						"Some sigils provide a list of spells for the scion to use, the scion can use that sigil to cast one of the spells listed as long as the scion has a sigil slots of that level or higher. If a Sigil Slot is used for casting a spell, the spell is casted at the respective level of the slot. For example, when you are 5th level and you cast the 1st-level spell {@spell cure wounds}, you must spend one of those slots, and you cast it as a 2nd-level spell. "
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Ability",
+					"name": "Sigil Ability",
 					"entries": [
-						"Intelligence is your spellcasting ability for your scion spells, so you use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a scion spell you cast and when making an attack roll with one.",
+						"As a student of magic, Intelligence is the ability you use if a sigil requires a saving throw or calls for an attack roll.",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "Sigil",
 							"attributes": [
 								"int"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "Sigil",
 							"attributes": [
 								"int"
 							]
 						}
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Spellcasting Focus",
-					"entries": [
-						"You can spend one hour a day as part of your long rest to concentrate the power you harvested into a chosen {@item holy symbol|phb}, {@item shield|phb} or weapon. As a bonus action, you can summon your spell focus into your hand and can dismiss it into a pocket dimension  at anytime without using an action.",
-						"You can perform the somatic components of spells even when you have weapons or a shield in one or both hands."
 					]
 				},
 				{
@@ -910,19 +557,9 @@
 							"entries": [
 								{
 									"type": "entries",
-									"name": "Writing Down Spells",
+									"name": "Casting Sigils",
 									"entries": [
-										"Any Scion can have their memorized spells written down in any scroll by spending 1 hour and 50 gp. per level of the spell. In addition to this, the scion must spend a spell slot spend and have Calligrapher's Supplies. If the scion crafts a scroll for a 1st level spell using a 4th level spell slot, the spell is casted at 4th level.",
-										"Spells written by a scion can only be understood by other scions and other spellcasters can't decipher the scrolls even if they use magic. To cast a spell from a scroll the scion must follow the rules of using spell scrolls as found on the *Dungeon Masters Guide* page 200.",
-										{
-											"type": "entries",
-											"name": "Replacing Memorized Spells",
-											"entries": [
-												"Scions can replace their memorized spells with another spell from the scion spell list, which also must be of a level for which they have spell slots. To do so they must spend 2 hour for each level of the spell they wish to learn, the previous spell is forgotten by them and cannot cast it in anyway possible.",
-												"The time spent represents the amount of time needed by a scion to learn the new spell in order to master it. In addition to this they must have any written way of studying the spell.",
-												"If you desire to learn a spell written by another spellcaster, it can only be done if you succeed an Intelligence ({@skill Arcana}) skill check against a DC 10 + the spells level. On a success, the scroll becomes unusable, turning it into dust. On a failure, the scion must spend one long rest before trying again."
-											]
-										}
+										"Sigils are the written words of creation also known as Supernal, giving their powers a divine origin. As such, all sigils, and spells provided by sigils, require verbal and somatic components to be activated but no material components as the inscription replaces them. Additionally, all sigils count as spells of a level equal to the level of the sigil slot spent to cast it."
 									]
 								}
 							]
@@ -932,78 +569,23 @@
 			]
 		},
 		{
-			"name": "Sacred Sigil",
+			"name": "Combat Insight",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 2,
 			"entries": [
-				"At 2nd level, the power you harvested from the planes can be used to mark your enemies with long forgotten divine sigils, small visible divine symbols that are placed on the creatures body. As a bonus action, you can place a seal on a creature you can see within 60 feet for 1 minute.  It ends early if the creature ends it's turn more than 60 feet away from you, it drops to 0 hit points or you are knocked unconscious.",
-				"While a creature has a sigil on it, it is considered a sealed creature. You can only have one seal active at a time. ",
-				"The moment you choose to consume a seal, the creature is no longer under the effects of the sigil and therefore no longer sealed.",
-				"Whenever you hit the sealed creature with a melee weapon attack you choose to do one of the following:",
-				{
-					"type": "list",
-					"items": [
-						"Deal an extra {@dice 1d4} damage of your Planar Source type. The damage increases as you gain levels as a scion, as shown in the Sigil Damage column of the Scion table.",
-						"Consume the sigil to deal an extra number of d8's of damage equal to the maximum number of times you can use your seals per short rest, the type of this damage is that of your Planar Source."
-					]
-				},
-				"Once you have used your sigils the maximum number of times for your scion level, you must finish a short or long rest before you can use them again. You may use your sigils 2 times at 2nd level, 3 at 5th, 4 at 9th, 5 at 13th, and 6 at 17th.",
-				{
-					"type": "entries",
-					"name": "Planar Source",
-					"entries": [
-						"Through your rigorous study of the planes and religious texts, you have learned how to tap into one of the sources of power wielded by the gods. Choose one of the following that best suits your alignment: Good, Neutral, Evil. This choice affects the damage type of your sigils based on the table below.",
-						{
-							"type": "table",
-							"colLabels": [
-								"Alignment",
-								"Damage Type"
-							],
-							"rows": [
-								[
-									"Good",
-									"Radiant"
-								],
-								[
-									"Neutral",
-									"Force"
-								],
-								[
-									"Evil",
-									"Necrotic"
-								]
-							]
-						}
-					]
-				}
+				"Starting at 2nd level, your experience battling the enemies of the church allows you to better understand what you are fighting. As a bonus action, choose one creature you can see within 60 feet of you. The creature's type has to be either an {@filter aberration|bestiary|type=aberration}, {@filter celestial|bestiary|type=celestial}, {@filter elemental|bestiary|type=elemental}, {@filter fey|bestiary|type=fey}, {@filter fiend|bestiary|type=fiend}, {@filter monstrosity|bestiary|type=monstrosity}, or {@filter undead|bestiary|type=undead}. You immediately learn whether the creature has any damage immunities, resistances, vulnerabilities, and if the target has more of less hit points than you."
 			]
 		},
 		{
-			"name": "Empower Sigil",
-			"source": "Scion",
-			"className": "Scion",
-			"classSource": "Scion",
-			"level": 2,
-			"entries": [
-				"Your time studying arcane formulas and the powers you control, has helped you learn how to modify your sigils making them deadlier.",
-				"When you reach 2nd level, you gain one sigil empowerment of your choice. Your sigil empowerment options are detailed on the {@filter Optional Features|optionalfeatures|Feature Type=SE} page. You gain additional empowerments of your choice at 6th level, 11th Level, and 15th level.",
-				"Additionally, when you gain a level in this class, you can choose one of the empowerments you know and replace it with another one that you could learn at that level. ",
-				"When you use your bonus action to place a sacred sigil on a creature, you can chose to use one of your sigil empowerments to make it more threatening.",
-				"If the empowerment requires a saving throw to be made, the DC equals your scion spell save DC.",
-				"All empowerments remain on the creature while it is sealed, unless it is stated otherwise by the empowerment.",
-				"Each sigil empowerment can only be used once per long rest."
-			]
-		},
-		{
-			"name": "Divine Talent",
+			"name": "Sacred Hunter",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 3,
 			"entries": [
-				"At 3rd level, the divine power flowing through you enhances your abilities. Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill."
+				"At 3rd level, the knowledge you have gathered about the enemies of the church, has allowed you to become a better hunter. As a result, whenever you make a Wisdom ({@skill Perception}) or Wisdom ({@skill Survival}) check, you gain a bonus to the check equal to your Intelligence modifier."
 			]
 		},
 		{
@@ -1013,7 +595,7 @@
 			"classSource": "Scion",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you have transitioned from a trainee into an official of a church allowing you to choose how you serve it by selecting either Acolyte, Avenger, Inquisitor or Magus.",
+				"At 3rd level, you have transitioned from a trainee into an official of a church allowing you to choose how you serve it by selecting either Acolyte, Avenger, Inquisitor, Magus, or Sin Eater",
 				"Your choice grants you features at 3rd level and again at 7th, 15th level, and 20th."
 			]
 		},
@@ -1039,13 +621,16 @@
 			]
 		},
 		{
-			"name": "Empower Sigil (2)",
+			"name": "Prime Sigil (1st level)",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 6,
 			"entries": [
-				"When you reach 6th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
+				"At 6th level, you have managed to master one specific sigil which you can cast with little effort. Choose one {@filter 1st-level sigil|spells|level=1|class=Scion (SCN)} as your prime sigil. You always have this sigil inscribed, it doesn't count against the number of sigils you have inscribed, and you can cast it at 1st level without expending a sigil slot once per long rest.",
+				"At 17th level you can chose one {@filter 1st- or 2nd-level sigil|spells|level=1;2|class=Scion (SCN)} as your secondary prime sigil. You can cast this this sigil once without expending a sigil slot at 2nd-level. You regain all uses of your Prime Sigils when you finish a long rest.",
+				"Whenever you gain a new level in this class, you can change any of your prime sigils",
+				"If you want to cast either sigil at a higher level, you must expend a sigil slot as normal."
 			]
 		},
 		{
@@ -1070,34 +655,31 @@
 			]
 		},
 		{
-			"name": "Sigil Casting",
-			"source": "Scion",
-			"className": "Scion",
-			"classSource": "Scion",
-			"level": 9,
-			"entries": [
-				"Upon reaching 9th level, once per long rest you can use your knowledge of arcane sigils to ignore all requirements of writing down spells memorized via your Planar Power feature and must spend only 10 minutes writing it down in the form of a sigil.",
-				"You can only have one such scroll at a time and it lasts until it is used or you create another. If the scroll is used to cast the spell, the spell is casted at its lowest level."
-			]
-		},
-		{
-			"name": "Divine Weapon",
+			"name": "Combat Casting",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 10,
 			"entries": [
-				"At 10th level, you mastered the manipulation of the planar power you wield. While you are holding your spell focus in your hand and you use your action to cast a spell, you can make one weapon attack as a bonus action."
+				"By 10th level, the dual training you have undergone allows you to use sigils and attack with a weapon at the same time. When you use your action to cast a sigil, you can make one weapon attack as a bonus action."
 			]
 		},
 		{
-			"name": "Empower Sigil (3)",
+			"name": "Hunter's Instinct",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 11,
 			"entries": [
-				"When you reach 11th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
+				"When you reach 11th level, your time hunting down the enemies of the church has trained your body to never be caught off-guard granting you the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You have a +2 bonus to initiative checks.",
+						"You are never surprised, so long as you are not incapacitated.",
+						"On your first turn in combat, you have advantage on attack rolls against any creature that hasn't taken a turn in combat."
+					]
+				}
 			]
 		},
 		{
@@ -1112,19 +694,6 @@
 			]
 		},
 		{
-			"name": "Planar Arcanum (4th level)",
-			"source": "Scion",
-			"className": "Scion",
-			"classSource": "Scion",
-			"level": 13,
-			"entries": [
-				"At 13th level, you can focus the planar power you have harvested and left to flow through your body into the most powerful spells that you can cast. Choose one {@filter 4th-level spell from the scion spell list|spells|level=4|class=Scion (SCN)} as this arcanum. You can cast your arcanum once without expending a spell slot, and you must finish a long rest before you can do so again.",
-				"You can also expend an arcanum to cast a different scion spell you have memorized at a level corresponding to the level of the expended arcanum’s spell. For example, if you chose the 4th-level spell {@spell blight} as an arcanum, and you also know the {@spell armor of agathys} spell, you can expend this arcanum to cast magic missile as a 4th-level spell without expending a spell slot. Also, you can spend this arcanum to empower your sigils forcing them to be casted as if you were using a 4th level spell slot.",
-				"Finally, if you wish to replace your arcanum spell you must follow the rules detailed in the 'Memorized Spells' sidebar.",
-				"At 17th level, you gain a {@filter 5th-level spell scion spell|spells|level=5|class=Scion (SCN)} of your choice that can be cast this way. You regain all uses of your Planar Arcanum when you finish a long rest."
-			]
-		},
-		{
 			"name": "Sacred Task feature",
 			"source": "Scion",
 			"className": "Scion",
@@ -1135,13 +704,13 @@
 			]
 		},
 		{
-			"name": "Empower Sigil (4)",
+			"name": "Advanced Esoteric Knowledge",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 15,
 			"entries": [
-				"When you reach 15th level, you gain one additional sigil power of your choice from the {@filter Optional Features|optionalfeatures|Feature Type=SE} page."
+				"Beginning  at 15th level, your knowledge of the language of the god has grown to the extent that you are always under the effects of the {@spell mage armor} and {@spell comprehend languages} spells. These spells cannot be dispelled or suppressed."
 			]
 		},
 		{
@@ -1156,44 +725,25 @@
 			]
 		},
 		{
-			"name": "Planar Arcanum (5th level)",
+			"name": "Prime Sigil (2nd level)",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 17,
 			"entries": [
-				"At 17th level, you gain a {@filter 5th-level spell scion spell|spells|level=5|class=Scion (SCN)} of your choice that can be cast this way. You regain all uses of your Planar Arcanum when you finish a long rest."
+				"At 17th level you can chose one {@filter 1st- or 2nd-level sigil|spells|level=1;2|class=Scion (SCN)} as your secondary prime sigil. You can cast this this sigil once without expending a sigil slot at 2nd-level. You regain all uses of your Prime Sigils when you finish a long rest.",
+				"Whenever you gain a new level in this class, you can change any of your prime sigils",
+				"If you want to cast either sigil at a higher level, you must expend a sigil slot as normal."
 			]
 		},
 		{
-			"name": "Divine Succor",
+			"name": "Hunter's Strike",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
 			"level": 18,
 			"entries": [
-				"When you reach 18th level, the control you have over the power of the gods flowing through your body has grown to where you can reach into the planes and bring forth a creature's spirit to assist you on your divine task. Once per long rest, as an action you cast a summoning spell at 6th level without using a spell slot and material components. The spell you are able to cast depends on your planar source and is based on the table below.",
-				{
-					"type": "table",
-					"colLabels": [
-						"Alignment",
-						"Spell"
-					],
-					"rows": [
-						[
-							"Good",
-							"{@spell summon celestial|tce}"
-						],
-						[
-							"Neutral",
-							"{@spell summon draconic spirit|ftd}"
-						],
-						[
-							"Evil",
-							"{@spell summon fiend|tce}"
-						]
-					]
-				}
+				"By 18th level, as an expert hunter you have learned where to place your strikes to make them lethal. Whenever you roll the maximum result on a damage die for a weapon, roll that die again and add the result to the damage total. Each time a reroll results in maximum damage, roll it again and add it to the damage total."
 			]
 		},
 		{
@@ -1245,7 +795,7 @@
 			]
 		},
 		{
-			"name": "Divine Light",
+			"name": "Divine Commander",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1254,8 +804,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"As an action, you can cast a ray of soothing light to remove one condition from a creature that you can see within 30 feet of you. The condition has to be eitherStarting at 3rd level, you can spend your action to cast a ray of soothing light on a creature that you can see within 30 feet of you. You can remove one condition from the target, the condition has to be either {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition paralyzed}, or {@condition poisoned}.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again."
+				"Starting at 3rd level, the acolyte is talented at issuing commands to others in the battlefield. As an action, you can have a friendly creature, within 60 feet of you who can hear or see you, use its reaction to take the {@action attack} action or to move up to half their walking speed without provoking attacks of opportunity. "
 			]
 		},
 		{
@@ -1268,7 +817,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Becoming an Acolyte lets you choose from an expanded list of spells when you learn a scion spell. The following spells are added to the scion spell list for you.",
+				"You learn an how to cast some spells when you reach certain levels in this class, as shown in the Spells table bellow. Each spell counts as a sigil for you, but it doesn't count against the number of inscribed sigils.",
 				{
 					"type": "table",
 					"caption": "Acolyte Spells",
@@ -1283,30 +832,30 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell bless}, {@spell healing word}"
+							"{@spell healing word}"
 						],
 						[
 							"5th",
-							"{@spell aid}, {@spell enlarge/reduce}"
+							"{@spell aid}"
 						],
 						[
 							"9th",
-							"{@spell becon of hope}, {@spell haste}"
+							"{@spell aura of vitality}"
 						],
 						[
 							"13th",
-							"{@spell aura of life}, {@spell stoneskin}"
+							"{@spell aura of life}"
 						],
 						[
 							"17th",
-							"{@spell greater restoration}, {@spell mass cure wounds}"
+							"{@spell mass cure wounds}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Restorative Consumption",
+			"name": "Invigorating Sigil",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1315,7 +864,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"At 7th level, when an ally hits a sealed creature with a melee attack, you can use your reaction to consume the seal and allow the attacker to regain a number of hit points equal to the damage dealt."
+				"At 7th level, you can concentrate your power to burst out tendrils of divine energy that boost the attacks of your allies. As a bonus action, you can spend one of your sigil slots to grant a number of creatures equal to the level of the sigil slot spent within 10 feet of you, advantage on their attack rolls for 1 minute or until you fall unconscious."
 			]
 		},
 		{
@@ -1328,8 +877,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, each turn your allies hit a sealed creature, the target also takes {@dice 1d8} damage of the same type as your Planar Source.",
-				"Additionally, when a sealed creature targets one of your allies with an attack, that ally gains a +2 bonus to AC against that attack."
+				"Starting at 14th level, once per long rest, you can spend your action to expel an aura of soothing light that affects a number of creatures up to your Intelligence modifier in a 15 foot radius. For each creature affected you can choose to remove a level of {@condition exhaustion}, a curse or one condition."
 			]
 		},
 		{
@@ -1380,7 +928,7 @@
 			]
 		},
 		{
-			"name": "Sacred Hunter",
+			"name": "Sacred Stalker",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1389,7 +937,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Starting at 3rd level, you can use your sigil features when you hit a creature sealed by you with a ranged weapon attack. In addition, you can use your bonus action to take the Dash or Disengage action."
+				"Starting at 3rd level, your training hunting the creatures that lurk in the dark has provided you with enough experience to take advantage of when a creature is most vulnerable. Once per turn and if you have advantage on the attack roll, you can deal additional {@damage 1d6} necrotic damage."
 			]
 		},
 		{
@@ -1402,7 +950,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Becoming an Avenger lets you choose from an expanded list of spells when you learn a scion spell. The following spells are added to the scion spell list for you.",
+				"You learn an how to cast some spells when you reach certain levels in this class, as shown in the Spells table bellow. Each spell counts as a sigil for you, but it doesn't count against the number of inscribed sigils.",
 				{
 					"type": "table",
 					"caption": "Inquisitor Spells",
@@ -1417,30 +965,30 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell disguise self}, {@spell hail of thorns}"
+							"{@spell disguise self}"
 						],
 						[
 							"5th",
-							"{@spell invisibility}, {@spell misty step}"
+							"{@spell invisibility}"
 						],
 						[
 							"9th",
-							"{@spell conjure barrage}, {@spell gaseous form}"
+							"{@spell gaseous form}"
 						],
 						[
 							"13th",
-							"{@spell freedom of movement},{@spell phantasmal killer}"
+							"{@spell freedom of movement}"
 						],
 						[
 							"17th",
-							"{@spell modify memory}, {@spell passwall}"
+							"{@spell passwall}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Dark Consumption",
+			"name": "Dark Sigil",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1449,11 +997,11 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"When you reach 7th level, you can use your action once per long rest to consume your sigil. The previously sealed creature and every other creature in a 5 foot radius of it make a Constitution saving throw against your spell save DC. All creatures take an amount of psychic damage equal to the consumption damage and are blinded until the end of your next turn on a failed save. On a successful one, the creature only takes half as much damage."
+				"When you reach 7th level, you unleash a psychic shock wave that expels the darkness within you. As a bonus action, you can spend one of your sigil slots to force each creature within 10 feet of you into making a Constitution saving throw against your sigil save DC. On a failure, the creature takes {@damage 1d8} psychic damage for each level of the sigil slot spent in addition to being {@condition blinded} until the end of your next turn."
 			]
 		},
 		{
-			"name": "Blessing of the Predator",
+			"name": "Eyes of the Predator",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1462,7 +1010,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you can use your bonus action to see in normal and magical darkness, as well as, {@condition invisible} creatures and objects up to a range of 30 feet for 1 minute. Additionally, while active you gain immunity to the {@condition frightened} condition. This feature lasts a number of rounds equal to your Intelligence modifier. "
+				"At 14th level, you are accustomed to the darkness and fighting that which can't be seen, this allows you to see normally in darkness, both magical and nonmagical, to a distance of 60 feet. Additionally, creatures can't gain any benefit from being {@condition invisible} from you as long as they are within 30 feet of you. "
 			]
 		},
 		{
@@ -1535,7 +1083,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Becoming an Inquisitor lets you choose from an expanded list of spells when you learn a scion spell. The following spells are added to the scion spell list for you.",
+				"You learn an how to cast some spells when you reach certain levels in this class, as shown in the Spells table bellow. Each spell counts as a sigil for you, but it doesn't count against the number of inscribed sigils.",
 				{
 					"type": "table",
 					"caption": "Inquisitor Spells",
@@ -1550,30 +1098,30 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell compelled duel}, {@spell shield}"
+							"{@spell thunderwave}"
 						],
 						[
 							"5th",
-							"{@spell branding smite}, {@spell suggestion}"
+							"{@spell suggestion}"
 						],
 						[
 							"9th",
-							"{@spell lightning bolt}, {@spell protection from energy}"
+							"{@spell lightning bolt}"
 						],
 						[
 							"13th",
-							"{@spell fire shield}, {@spell locate creature}"
+							"{@spell stoneskin}"
 						],
 						[
 							"17th",
-							"{@spell flame strike}, {@spell telekinesis}"
+							"{@spell telekinesis}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Warding Consumption",
+			"name": "Warding Sigil",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1582,11 +1130,11 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Beginning at 7th level, you can reclaim some of the power of your sigils to protect you. As a bonus action you can consume a seal and create a ward around you. You gain a number of temporary hit points equal to your scion level plus your Intelligence modifier."
+				"Beginning at 7th level, you have gathered enough experience fighting that you can gather your power to protect you. When you would be dealt damage, you can use your reaction to spend a sigil slot and reduce the damage by {@dice 1d8} for each sigil slot level spent + your Intelligence modifier."
 			]
 		},
 		{
-			"name": "Blessing of the Knight",
+			"name": "Stoic Guardian",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1595,7 +1143,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"When you reach 14th level, you allow the power of the planes to fuel your attacks. When you place a sigil on a creature, you can spend a spell slot to gain advantage on all melee weapon attacks against the creature. This feature lasts while a creature is sealed or until you lose your concentration (as if you were concentrating on a spell). "
+				"When you reach 14th level, your devotion to your task allows you to stand up even when at deaths door. When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
 			]
 		},
 		{
@@ -1614,7 +1162,7 @@
 					"items": [
 						"Your size grows by one size category and your weapons also grow to match its new size. While these weapons are enlarged, your attacks with them deal {@damage 1d4} extra damage.",
 						"Resistance against bludgeoning, piercing, and slashing attacks.",
-						"Your Dexterity score increases by 10, as does your Dexterity maximum."
+						"Your Strength or Dexterity score increases by 10, as does your maximum."
 					]
 				}
 			]
@@ -1645,7 +1193,7 @@
 			]
 		},
 		{
-			"name": "Sacred Arcana",
+			"name": "Arcane Blast",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1654,12 +1202,16 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"At 3rd level, you have learned how to sheathe your hands in your planar energy to strike a creature with either your fists or by releasing it as a bolt of energy. As an action, you can make either a melee or range spell attack against a creature that you can see within 60 feet of you. On a hit, the creature is dealt {@damage 1d8} damage of your Planar Source type.",
-				"A number of times equal to your proficiency bonus per long rest, you can chose to increase its potency at the risk of sacrificing its stability. You can increase the damage by a number of d8s up to your level in this class. If you do so, you take a penalty to the attack roll equal to twice the number of d8s increased. For example, if you increase damage of the spell by 3d8, you take a penalty to the attack roll of -6.",
-				"This feature counts as spell, the spell level of which is equal to one fourth of your scion level.",
-				"If you score a critical hit on the attack roll, you do not roll the number of dice twice.",
-				"When you use this feature, you can use a spell slot, the damage increases by {@damage 1d8} for each spell slot level spent.",
-				"This feature's damage increases by 1d8 when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
+				"At 3rd level, you have learned how to sheathe your hands in your magical energy to strike a creature with either your fists or by releasing it as a bolt of energy. As an action, you can make a ranged spell attack against a creature that you can see within 60 feet of you and being within 5 feet of a hostile creature doesn't impose disadvantage on the attack roll.",
+				"On a hit, the attack deals {@damage 2d8} force damage. Additionally, you can use one sigil slot to increase the damage by {@dice 1d8} for each level of the sigil slot spent.",
+				"This feature counts as spell, the spell level of which is equal to half of your scion level (maximum of 9th level spell). The damage of this spell increases by 1d8 when you reach 5th level ({@damage 3d8}), 11th level ({@damage 4d8}), and 17th level ({@damage 5d8}).",
+						{
+							"type": "entries",
+							"name": "Upcasting",
+							"entries": [
+								"Before you make the attack roll you can chose to increase the potency of the spell at the risk of sacrificing its stability. A number of times equal to your proficiency bonus per long rest, you can increase the damage by any number of d8s up to your level in this class. If you do so, you take a penalty to the attack roll equal to the number of d8s increased. For example, if you increase damage of the spell by {@dice 3d8}, you take a penalty to the attack roll of -3."
+							]
+						}
 			]
 		},
 		{
@@ -1672,7 +1224,7 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Becoming an Magus lets you choose from an expanded list of spells when you learn a scion spell. The following spells are added to the scion spell list for you.",
+				"You learn an how to cast some spells when you reach certain levels in this class, as shown in the Spells table bellow. Each spell counts as a sigil for you, but it doesn't count against the number of inscribed sigils.",
 				{
 					"type": "table",
 					"caption": "Task Spells",
@@ -1687,30 +1239,30 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell bless}, {@spell inflict wounds}"
+							"{@spell inflict wounds}"
 						],
 						[
 							"5th",
-							"{@spell magic weapon}, {@spell scorching ray}"
+							"{@spell scorching ray}"
 						],
 						[
 							"9th",
-							"{@spell arcane eye}, {@spell fireball}"
+							"{@spell fireball}"
 						],
 						[
 							"13th",
-							"{@spell ice knife}, {@spell fly}"
+							"{@spell fire shield}"
 						],
 						[
 							"17th",
-							"{@spell destructive wave}, {@spell skill empowerment}"
+							"{@spell destructive wave}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Arcane Consumption",
+			"name": "Explosive Sigil",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1719,11 +1271,11 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level, you can convert you sigil into an explosion of your Sacred Arcana. When you deal damage to a creature sealed by you with your Sacred Arcana, you can choose to consume the sigi and force all creatures within 10 foot of it into making a Dexterity saving throw against your scion spell save DC. On a failure, the creature is affected by the blast just like the previously sealed creature."
+				"Starting at 7th level, you can convert your energy into an explosion of your Arcane Blast feature. When you deal damage to a creature with your Arcane Blast feature, you can choose to consume a sigil slot and force all creatures within 10 foot of it into making a Dexterity saving throw against your sigil save DC. On a failure, the creature is affected by your Arcane Blast feature."
 			]
 		},
 		{
-			"name": "Blessing of the Arcanist",
+			"name": "Advanced Arcana",
 			"source": "Scion",
 			"className": "Scion",
 			"classSource": "Scion",
@@ -1732,10 +1284,8 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Beginning at 14th level, you have learned enough about magic that you can now create more complex formulas. You can now add any number of effects from the table below to your Sacred Arcana feature.",
-				"To use any effect, you must subtract the penalty to from the attack roll. In addition, you can use a spell slot and forgo the additional damage to instead get a bonus to the attack roll by a number equal to the level of the spell slot used.",
-				"When the damage of your Sacred Arcana feature is dealt, the effect takes place and last for 1 minute. At the end of its turn, the creature can make a saving throw against your scion spell save DC using the ability detailed on the table below, ending the effect on a success.",
-				"If you add multiple effects that use different ability saving throws, you chose one of them.",
+				"Beginning at 14th level, you have learned enough about magic that you can now create more complex formulas. You can now add any number of effects from the table below to your Arcane Blast feature.",
+				"After the dice is rolled but before you know the result, you must subtract the penalties to from the attack roll. Additionally, you can reduce the number of d8s rolled (to a minimum of 1d8) to get a +1 to the attack roll for each damage die not rolled. If your Arcane Blast feature hits, the effect takes place and last for 1 minute. At the end of its turn, the creature can make a saving throw against your sigil save DC using the ability detailed on the table below, ending all effects on a success. If you add multiple effects that use different ability saving throws, the creature choses one.",
 				{
 					"type": "table",
 					"caption": "Effects",
@@ -1821,12 +1371,12 @@
 							"Constitution"
 						],
 						[
-							"-1",
+							"-2",
 							"Unable to talk",
 							"Constitution"
 						],
 						[
-							"-1",
+							"-3",
 							"Weapon attacks deal half damage (rounded down)",
 							"Strength"
 						]
@@ -1848,9 +1398,143 @@
 				{
 					"type": "list",
 					"items": [
-						"You can use your sigil features when you deal damage to a creature sealed by you with a spell.",
-						"You take no damage from magic missile and have a bonus equal to your Intelligence modifier to your AC and saving throws against spells that target you.",
-						"When you cast a spell that deals a type of damage the from the following list, listed you can change damage type to one of the other the types: acid, cold, fire, lightning, necrotic, poison, radiant, thunder."
+						"You have advantage on all sigil or spell attack you make.",
+						"You take no damage from {@spell magic missile} and have a bonus equal to your Intelligence modifier to your AC and saving throws against spells that target you.",
+						"When you cast a sigil that deals a type of damage the from the following list, listed you can change damage type to one of the other the types: acid, cold, fire, lightning, necrotic, poison, radiant, thunder."
+					]
+				}
+			]
+		},
+		{
+			"name": "Sin Eater",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 3,
+			"entries": [
+				"There are those who fight monsters with complete disregard to their own health, living on the edge between life and death. Some are called martyrs, because they live by the creed that to expunge your sins blood needs to be spilled."
+			]
+		},
+		{
+			"name": "Sin Eater Bonus Proficiencies",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"When you choose this sacred task at 3rd level, you gain proficiency with the {@skill Athletics} skill and {@item alchemist's supplies|phb}"
+			]
+		},
+		{
+			"name": "Retribution",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"At 3rd level, you can let the adrenaline of fighting enemies strengthen your strikes to wound back those who hurt you. When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a weapon attack against the triggering creature. On a hit, the attack deals an additional {@damage 1d6} necrotic damage.",
+				"If you have less than half your hit points, the attack deals an additional 1d8 necrotic damage instead."
+			]
+		},
+		{
+			"name": "Sin Eater Expanded Spell List",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You learn an how to cast some spells when you reach certain levels in this class, as shown in the Spells table bellow. Each spell counts as a sigil for you, but it doesn't count against the number of inscribed sigils.",
+				{
+					"type": "table",
+					"caption": "Sin Eater Spells",
+					"colLabels": [
+						"Scion Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell command}"
+						],
+						[
+							"5th",
+							"{@spell ray of enfeeblement}"
+						],
+						[
+							"9th",
+							"{@spell vampiric touch}"
+						],
+						[
+							"13th",
+							"{@spell blight}"
+						],
+						[
+							"17th",
+							"{@spell raise dead}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Merciless Sigil",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Upon reaching 7th level, your know how to use the blood of a fallen foe to enhance your weapon. As a reaction to an enemy you can see falling to 0 hp within 10 feet of you, you can expend a sigil slot to coat the blade in the blood of your foe. For 1 minute or until you lose your concentration (as if you were concentrating on a spell), you can deal an additional amount of necrotic damage equal to the level of the sigil slot spent.",
+				"While this feature is active and if you are bellow half your hit points, you can add your Intelligence modifier to your attack rolls."
+			]
+		},
+		{
+			"name": "Hemomancy",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, you have learned how to use the power of your own vitality to cast sigils. As a bonus action, you can expend your Hit Die to regain one sigil slot. The number of Hit Die spent this way equal the level of the sigil slot regained."
+			]
+		},
+		{
+			"name": "Hemokinesis",
+			"source": "Scion",
+			"className": "Scion",
+			"classSource": "Scion",
+			"subclassShortName": "Sin Eater",
+			"subclassSource": "Scion",
+			"level": 20,
+			"header": 2,
+			"entries": [
+				"Starting at 20th level, you can control the blood flow of a creature either forcing it to bleed uncontrollably or close it's wounds. Once per long rest as an action you can do this for one minute, this blood control allows you to do the following:",
+				{
+					"type": "list",
+					"items": [
+						"You can cast the {@spell command} spell without spending a sigil slot.",
+						"As an action, you can force a creature you can see within 30 feet into making a Constitution saving throw. On a failure, the creature is cursed and dealt {@damage 1d10} necrotic damage at the start of its turn for 1 minute or until you lose your concentration (as if you were concentrating on a spell). At the end of its turn it can repeat the saving throw, on success the curse ends.",
+						"As an action, a creature you can see within 30 feet of you can spend one of its Hit Dice, roll the die, and regain a number of hit points equal to the result + your Intelligence modifier."
 					]
 				}
 			]
@@ -1858,150 +1542,7 @@
 	],
 	"spell": [
 		{
-			"name": "Aura of Self-doubt",
-			"source": "Scion",
-			"level": 4,
-			"school": "A",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "radius",
-				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"Your words radiate insecurity on those that would oppose you. Each hostile creature in the aura must succeed a Charisma saving throw at the start of their turn or suffer a penalty to their attack rolls equal to your spell casting ability modifier."
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Scion",
-						"source": "Scion"
-					}
-				]
-			}
-		},
-		{
-			"name": "Fire Whip",
-			"source": "Scion",
-			"level": 1,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "bonus"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "self"
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"You produce a whip of fire that you can use as a weapon. This whip lasts for the duration of the spell. It counts as a simple melee weapon with which you are proficient. It deals 1d10 fire damage on a hit and has the finesse, reach of 10 feet and light properties. In addition, when you hit a creature with an attack from this whip the creature must succeed a Strength saving throw or be restrained. While the creature is restrained, at the start of it's turn you deal 1d10 fire damage to the target, it can use it's action to attempt to break free by rolling a Strength saving throw. If the creature succeeds, it breaks free and it is no longer restrained, in case of a failure it can repeat the saving throw on it's next turn. You cannot attack any creature with this weapon if you have a creature restrained."
-			],
-			"damageInflict": [
-				"fire"
-			],
-			"savingThrow": [
-				"strength"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Scion",
-						"source": "Scion"
-					}
-				]
-			}
-		},
-		{
-			"name": "Mist of Sacrilege",
-			"source": "Scion",
-			"level": 5,
-			"school": "N",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "radius",
-				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true,
-				"m": "a drop of fiendish blood"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1
-					},
-					"concentration": true
-				}
-			],
-			"entries": [
-				"A red mist full of negative energy surrounds you with a 15-foot radius. Until the spell ends, the mist moves with you, centered on you. If a creature (except you) starts their turn in the mist, they take 3d8 necrotic damage and you gain hit points equal to half the damage dealt."
-			],
-			"damageInflict": [
-				"necrotic"
-			],
-			"areaTags": [
-				"S"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Scion",
-						"source": "Scion"
-					}
-				]
-			}
-		},
-		{
-			"name": "Sigil of Judgement",
+			"name": "Glyph of Judgement",
 			"source": "Scion",
 			"level": 1,
 			"school": "E",
@@ -2015,7 +1556,7 @@
 				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 30
+					"amount": 5
 				}
 			},
 			"components": {
@@ -2034,7 +1575,7 @@
 				}
 			],
 			"entries": [
-				"You place a sigil on a creature that you can see within range. Until the spell ends, whenever the creature wishes to speak a lie it must make a Charisma saving throw. On a failed save, the creature is dealt {@damage 1d6} force damage.",
+				"You place a glyph on a creature that you can see within range. Until the spell ends, whenever the creature wishes to speak a lie it must first make a Charisma saving throw. On a failed save, the creature is dealt {@damage 1d8} force damage.",
 				"An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such creatures can be evasive in its answers as long as it has the sigil on it.",
 				"Additionally, you can spend your bonus action to force the creature to make a Charisma saving throw. On a failed save, the creature is dealt {@damage 1d6} plus your spellcasting ability modifier force damage."
 			],
@@ -2043,14 +1584,12 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@damage 1d6} for each slot level above 1st."
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@damage 1d8} for each slot level above 1st."
 					]
 				}
 			],
 			"damageInflict": [
-				"radiant",
-				"force",
-				"necrotic"
+				"force"
 			],
 			"classes": {
 				"fromClassList": [
@@ -2062,27 +1601,265 @@
 			}
 		},
 		{
-			"name": "Mist of Damnation",
+			"name": "Reflection",
 			"source": "Scion",
-			"level": 3,
-			"school": "N",
+			"level": 4,
+			"school": "A",
 			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you see a creature within 60 feet of you target only you with a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You can attempt to revert the flow of magic to target the creature who casted a spell. If the creature is casting a spell of 4th level or lover, the spell returns to the caster targeting it instead. If it is casting a spell of 5th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the spell reverts back to the caster and targets it instead. "
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level or higher, the spell targets the caster if its level is less than or equal to the level of the sigil slot you used."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Arcana",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [],
+			"range": {},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [],
+			"entries": [
+				"This sigil allows the scion to connect to the arcane forces that shaped the world.",
+				"As a spellcasting sigil, it allows the caster to use any of the following spells. Any spell is casted at the level of the sigil slot spent without using any material components.",
+				{
+					"type": "table",
+					"caption": "Sigil Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell identify}"
+						],
+						[
+							"2nd",
+							"{@spell detect magic}"
+						],
+						[
+							"3rd",
+							"{@spell counterspell}, {@spell dispel magic}"
+						],
+						[
+							"4th",
+							"{@spell reflection}"
+						]
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Beguilers",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [],
+			"range": {},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [],
+			"entries": [
+				"This sigil allows the scion to connect to the arcane forces that shaped the world.",
+				"As a spellcasting sigil, it allows the caster to use any of the following spells. Any spell is casted at the level of the sigil slot spent without using any material components.",
+				{
+					"type": "table",
+					"caption": "Sigil Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell dissonant whispers}"
+						],
+						[
+							"2nd",
+							"{@spell crown or madness}"
+						],
+						[
+							"3rd",
+							"{@spell chypnotic pattern}"
+						],
+						[
+							"4th",
+							"{@spell charm monster}"
+						],
+						[
+							"5th",
+							"{@spell geas}"
+						]
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Bleeding",
+			"source": "Scion",
+			"level": 2,
+			"school": "S",
+  			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}				
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"This sigil grants the scion the tools needed to fight any enemy it faces, it does this by summon all types of weapons.",
+				"As a spellcasting sigil, it allows the caster to use any of the following spells. Any spell is casted at the level of the sigil slot spent without using any material components.",
+				{
+					"type": "table",
+					"caption": "Sigil Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell dissonant whispers}"
+						],
+						[
+							"2nd",
+							"{@spell crown or madness}"
+						],
+						[
+							"3rd",
+							"{@spell chypnotic pattern}"
+						],
+						[
+							"4th",
+							"{@spell charm monster}"
+						],
+						[
+							"5th",
+							"{@spell geas}"
+						]
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Bravery",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [
 				{
 					"number": 1,
 					"unit": "action"
 				}
 			],
 			"range": {
-				"type": "radius",
+				"type": "point",
 				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
+					"type": "self"
+				}				
 			},
 			"components": {
 				"v": true,
-				"s": true,
-				"m": "a piece of sulfur"
+				"s": true
 			},
 			"duration": [
 				{
@@ -2095,27 +1872,19 @@
 				}
 			],
 			"entries": [
-				"You concentrate divine energy on yourself creating an area of pure negative energy on the mundane world. You conjure a 15-foot radius of mist, darkness, brimstone, and blasting heat, that resonates with echoes of damned souls, the area is centered on you and lasts in place for the duration of the spell.",
-				"Any creature, other than you, that ends their turn in the mist take {@damage 2d8} fire damage and it must succeed on a Wisdom saving throw or take an additional {@damage 2d8} psychic damage as well as gaining disadvantage on its attack rolls and ability checks until the end of their next turn as the voices of the damned cloud their mind."
+				"This sigil allows you to channel the power of a dragon turning you immune to the fear and charmed conditions. Also, this sigil provides a protective barrier around the scion giving it at the start of its turn {@dice 1d6} + your proficiency bonus temporary hit points."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the fire damage increases by {@damage 1d8} for each slot level above 3rd."
+						"When you cast this spell using a 2nd-level sigil slot or higher, you gain {@dice 1d6} additional temporary hit points for each sigil slot level above 1st."
 					]
 				}
 			],
-			"damageInflict": [
-				"fire",
-				"psychic"
-			],
-			"savingThrow": [
-				"wisdom"
-			],
-			"areaTags": [
-				"S"
+			"miscTags": [
+				"THP"
 			],
 			"classes": {
 				"fromClassList": [
@@ -2127,70 +1896,275 @@
 			}
 		},
 		{
-			"name": "Vexing Blade",
+			"name": "Sigil of Charge",
 			"source": "Scion",
-			"level": 0,
-			"school": "V",
-			"time": [
+			"level": 2,
+			"school": "S",
+  			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}				
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": false
+				}
+			],
+			"entries": [
+				"The power of a bull runs through your veins empowering your attacks when you rush towards an enemy. Immediately after you take the {@action dash} action on your turn and move at least 10 feet, you can make one weapon attack."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a 3rd-level sigil slot or higher, the damage you deal with the attack increases by {@damage 1d6} for each sigil slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Charm",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [
 				{
 					"number": 1,
 					"unit": "action"
 				}
 			],
 			"range": {
-				"type": "radius",
+				"type": "point",
 				"distance": {
 					"type": "feet",
-					"amount": 5
-				}
+					"amount": 10
+				}				
 			},
 			"components": {
-				"s": true,
-				"m": {
-					"text": "a melee weapon worth at least 1 sp",
-					"cost": 10
-				}
+				"v": true,
+				"s": true
 			},
 			"duration": [
 				{
 					"type": "timed",
 					"duration": {
-						"type": "round",
+						"type": "minute",
 						"amount": 1
-					}
+					},
+					"concentration": true
 				}
 			],
 			"entries": [
-				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes surrounded in negative energy until the start of your next turn. If the target does not use its action to only attack you, it takes necrotic damage equal to your spellcasting ability modifier.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} necrotic damage to the target on a hit, and the necrotic damage the target takes for not attacking you increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
+				"When you cast this sigil, your eyes becomes marked with symbols. As an action, you can stare at a humanoid within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is {@condition charmed} by you until the spell ends or until you or your companions do anything harmful to it. You can only have one creature {@condition charmed} at a time. The {@condition charmed} creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was {@condition charmed} by you."
 			],
-			"scalingLevelDice": [
+			"savingThrow": [
+				"wisdom"
+			],
+			"entriesHigherLevel": [
 				{
-					"label": "necrotic damage on not attacking you",
-					"scaling": {
-						"1": "1d8",
-						"5": "2d8",
-						"11": "3d8",
-						"17": "4d8"
-					}
-				},
-				{
-					"label": "necrotic damage on hit",
-					"scaling": {
-						"5": "1d8",
-						"11": "2d8",
-						"17": "3d8"
-					}
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a 2nd-level sigil slot or higher, you can have one more creature charmed by you for each sigil slot level above 1st."
+					]
 				}
 			],
-			"damageInflict": [
-				"necrotic"
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Conquest",
+			"source": "Scion",
+			"level": 2,
+			"school": "S",
+  			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
 			],
-			"miscTags": [
-				"SCL"
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}				
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Your presence is magically enhanced allowing you to force a creature to kneel before you. When you cast this sigil, you can force a creature you can see within range into making a Charisma saving throw. On a failure, the creature takes {@damage 1d8} plus your Intelligence modifier psychic damage, is knocked prone and it's speed is reduced to 0. At the end of each of its turns, the target can make another Charisma saving throw. On a success, the sigil ends."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"charisma"
 			],
 			"areaTags": [
 				"ST"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a 3rd-level sigil slot or higher, the damage you deal increases by {@damage 1d8} for each sigil slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Combat",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [],
+			"range": {},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [],
+			"entries": [
+				"This sigil grants the scion the tools needed to fight any enemy it faces, it does this by summon all types of weapons.",
+				"As a spellcasting sigil, it allows the caster to use any of the following spells. Any spell is casted at the level of the sigil slot spent without using any material components.",
+				{
+					"type": "table",
+					"caption": "Sigil Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell ice knife}"
+						],
+						[
+							"2nd",
+							"{@spell shadow blade}"
+						],
+						[
+							"3rd",
+							"{@spell spirit shroud}"
+						],
+						[
+							"4th",
+							"{@spell raulothim's psychic lance}"
+						]
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Scion",
+						"source": "Scion"
+					}
+				]
+			}
+		},
+		{
+			"name": "Sigil of Darkness",
+			"source": "Scion",
+			"level": 1,
+			"school": "S",
+  			"time": [],
+			"range": {},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [],
+			"entries": [
+				"This sigil grants the scion the tools needed to fight any enemy it faces, it does this by summon all types of weapons.",
+				"As a spellcasting sigil, it allows the caster to use any of the following spells. Any spell is casted at the level of the sigil slot spent without using any material components.",
+				{
+					"type": "table",
+					"caption": "Sigil Spells",
+					"colLabels": [
+						"Spell Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell ice knife}"
+						],
+						[
+							"2nd",
+							"{@spell shadow blade}"
+						],
+						[
+							"3rd",
+							"{@spell spirit shroud}"
+						],
+						[
+							"4th",
+							"{@spell raulothim's psychic lance}"
+						]
+					]
+				}
 			],
 			"classes": {
 				"fromClassList": [
@@ -2204,7 +2178,7 @@
 	],
 	"optionalfeature": [
 		{
-			"name": "Planar Defense",
+			"name": "Esoteric Defense",
 			"source": "Scion",
 			"featureType": [
 				"FS:SC"
@@ -2214,18 +2188,18 @@
 			]
 		},
 		{
-			"name": "Planar Fists",
+			"name": "Divine Fists",
 			"source": "Scion",
 			"featureType": [
 				"FS:SC"
 			],
 			"entries": [
-				"By spending one hour per long rest, you can fuse a pair of hand wraps with your planar energy. While wearing them your unarmed strikes deal bludgeoning damage equal to {@damage 1d6} plus your Intelligence modifier. You use your choice of your Strength or Dexterity modifier for the attack roll.",
+				"Your unarmed strikes deal bludgeoning damage equal to {@damage 1d6} plus your Intelligence modifier. You use your choice of your Strength or Dexterity modifier for the attack roll.",
 				"At 6th level, your unarmed strikes are considered magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
 			]
 		},
 		{
-			"name": "Planar Warrior",
+			"name": "Arcane Warrior",
 			"source": "Scion",
 			"featureType": [
 				"FS:SC"
@@ -2236,237 +2210,15 @@
 					"innate": {
 						"_": [
 							{
-								"choose": "level=0|class=scion",
-								"count": 1
+								"choose": "level=0|class=wizard",
+								"count": 2
 							}
 						]
 					}
 				}
 			],
 			"entries": [
-				"Your time reading basic magic has helped you learn one cantrip of your choice from the {@filter scion spell list|spells|level=0|class=Scion (SCN}. It counts as scion spell for you, Intelligence is your spellcasting ability for it. Whenever your cantrips deal damage, you can add your Intelligence modifier to the roll."
-			]
-		},
-		{
-			"name": "Sigil of Bleeding",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"This sigil forces the creature to bleed uncontrollably from any open wound, when the sealed creature is hit with a weapon attack you can use your reaction to force the creature into making a Constitution saving throw. On a failure, the attack becomes a critical hit."
-			]
-		},
-		{
-			"name": "Sigil of Conquest",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 6,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"While the creature is sealed, you can use your action to make a melee spell attack. On a hit, it takes an amount of damage equal to {@damage 2d8} plus your Intelligence modifier of the same type as your Planar Source. Additionally, the sealed creature must make a Constitution saving throw. On a failure, the creature is knocked {@condition prone} and it's speed is reduced to 0 until the end of your next turn."
-			]
-		},
-		{
-			"name": "Sigil of Exertion",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"entries": [
-				"The target of this sigil starts to suffer from  a magical force that corrodes the muscles. While the creature is sealed, the creature has disadvantage on all attacks it makes and suffers necrotic damage equal to your scion level if it makes more than one attack during it's turn."
-			]
-		},
-		{
-			"name": "Sigil of Fatigue",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 15,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"You can force the extraneous weight of your power onto a creature, while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell) you can use your action to force the creature into making a Constitution saving throw. On a failure, the creature gains one level of exhaustion that is removed when the creature is no longer sealed or you lose concentration."
-			]
-		},
-		{
-			"name": "Sigil of Harm",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"entries": [
-				"Your weapons now channel the power of the sigil. Whenever you deal damage to the sealed creature, you deal additional damage equal to half your proficiency bonus (rounded down). The damage dealt is of the type of your Planar Source."
-			]
-		},
-		{
-			"name": "Sigil of Lighting",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"Bolts of lightning spark from the seal surrounding your weapon making your attacks more painful. When you use your attack action, you can replace one of your attacks to make a melee spell attack that on a hit forces the target to take {@damage 3d10} plus your Intelligence modifier lightning damage.",
-				"Whether you hit or miss, each creature, other than you, within 10 feet of the sealed creature must make a Dexterity saving throw. Each of these creatures takes {@damage 1d10} plus your Intelligence modifier thunder damage on a failed save."
-			]
-		},
-		{
-			"name": "Sigil of Protection",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 6,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"While the creature is sealed, you gain resistance against bludgeoning, piercing, and slashing damage made by the sealed creature."
-			]
-		},
-		{
-			"name": "Sigil of Puppetry",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 6,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"This sigil marks the eyes of a creature and making it susceptible to your commands. You can use your bonus action to force the sealed creature into making a Wisdom saving throw that on a failure, allows you to order the creature into making an attack against another creature within reach. Creatures that can't be {@condition charmed} or don't understand you are immune this empowerment."
-			]
-		},
-		{
-			"name": "Sigil of Repulsion",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"entries": [
-				"You can replace one of your attacks to force the sealed creature into making a Strength saving throw. On a failure, you can push it up to 15 feet."
-			]
-		},
-		{
-			"name": "Sigil of Reach",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 6,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"This sigil creates a bond  between you and the target, this bond allows you to follow the sealed creature amongst great distances. As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see within 5 feet of the sealed target."
-			]
-		},
-		{
-			"name": "Sigil of Spellcraft",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"entries": [
-				"The sealed creature gains a penalty to saving throws against spells you cast equal to the maximum number of times you can use your seals per short rest."
-			]
-		},
-		{
-			"name": "Sigil of Stagnation",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 11,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"When you place the seal on the creature or as an action, you can force the target into making a Wisdom saving throw. On a failure, the creature is under the effects of the spell {@spell slow} while the creature is sealed or until you lose your concentration (as if you were concentrating on a spell). "
-			]
-		},
-		{
-			"name": "Sigil of Suppression",
-			"source": "Scion",
-			"featureType": [
-				"SE"
-			],
-			"prerequisite": [
-				{
-					"level": {
-						"level": 15,
-						"class": {
-							"name": "Scion"
-						}
-					}
-				}
-			],
-			"entries": [
-				"This powerful sigil blocks spellcasters from using their magic by creating a null field within it. While it is sealed or until you lose your concentration (as if you were concentrating on a spell), the creature is unable to cast spells, use magic items, teleport or maintain concentration on a spell ",
-				"At the start of each of the target's turn, it can repeat the spellcasting ability saving throw. On a success, the creature is no longer under the effects of this power."
+				"You learn two cantrips of your choice from the {@filter wizard spell list|spells|level=0|class=wizard}. They count as scion spells for you, and Intelligence is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the {@filter wizard spell list|spells|level=0|class=wizard}."
 			]
 		}
 	],
@@ -2477,25 +2229,20 @@
 			"source": "Scion",
 			"additionalSpells": [
 				{
-					"expanded": {
+					"prepared": {
 						"3": [
-							"bless",
 							"healing word"
 						],
 						"5": [
-							"aid",
-							"enlarge/reduce"
+							"aid"
 						],
 						"9": [
-							"beacon of hope",
-							"haste"
+							"aura of vitality"
 						],
 						"13": [
-							"aura of life",
-							"stoneskin"
+							"aura of life"
 						],
 						"17": [
-							"greater restoration",
 							"mass cure wounds"
 						]
 					}
@@ -2505,8 +2252,8 @@
 				"Acolyte|Scion|Scion|Acolyte|Scion|3",
 				"Acolyte Expanded Spell List|Scion|Scion|Acolyte|Scion|3",
 				"Acolyte Bonus Proficiencies|Scion|Scion|Acolyte|Scion|3",
-				"Divine Light|Scion|Scion|Acolyte|Scion|3",
-				"Restorative Consumption|Scion|Scion|Acolyte|Scion|7",
+				"Divine Commander|Scion|Scion|Acolyte|Scion|3",
+				"Invigorating Sigil|Scion|Scion|Acolyte|Scion|7",
 				"Blessing of the Church|Scion|Scion|Acolyte|Scion|14",
 				"Apotheosis|Scion|Scion|Acolyte|Scion|20"
 			],
@@ -2519,25 +2266,20 @@
 			"source": "Scion",
 			"additionalSpells": [
 				{
-					"expanded": {
+					"prepared": {
 						"3": [
-							"disguise self",
-							"hail of thorns"
+							"disguise self"
 						],
 						"5": [
-							"invisibility",
-							"misty step"
+							"invisibility"
 						],
 						"9": [
-							"conjure barrage",
 							"gaseous form"
 						],
 						"13": [
-							"freedom of mvement", 
-							"phantasmal killer"
+							"freedom of movement"
 						],
 						"17": [
-							"modify memory",
 							"passwall"
 						]
 					}
@@ -2547,9 +2289,9 @@
 				"Avenger|Scion|Scion|Avenger|Scion|3",
 				"Avenger Expanded Spell List|Scion|Scion|Avenger|Scion|3",
 				"Avenger Bonus Proficiencies|Scion|Scion|Avenger|Scion|3",
-				"Sacred Hunter|Scion|Scion|Avenger|Scion|3",
-				"Dark Consumption|Scion|Scion|Avenger|Scion|7",
-				"Blessing of the Predator|Scion|Scion|Avenger|Scion|14",
+				"Sacred Stalker|Scion|Scion|Avenger|Scion|3",
+				"Dark Sigil|Scion|Scion|Avenger|Scion|7",
+				"Eyes of the Predator|Scion|Scion|Avenger|Scion|14",
 				"Call Upon the Aether|Scion|Scion|Avenger|Scion|20"
 			],
 			"className": "Scion",
@@ -2561,25 +2303,20 @@
 			"source": "Scion",
 			"additionalSpells": [
 				{
-					"expanded": {
+					"prepared": {
 						"3": [
-							"compelled duel", 
-							"shield"
+							"thunderwave"
 						],
 						"5": [
-							"branding smite",
 							"suggestion"
 						],
 						"9": [
-							"lightning bolt",
-							"protection from energy"
+							"lightning bolt"
 						],
 						"13": [
-							"fire shield",
-							"locate creature"
+							"stoneskin"
 						],
 						"17": [
-							"flame strike",
 							"telekinesis"
 						]
 					}
@@ -2590,8 +2327,8 @@
 				"Inquisitor Expanded Spell List|Scion|Scion|Inquisitor|Scion|3",
 				"Inquisitor Bonus Proficiencies|Scion|Scion|Inquisitor|Scion|3",
 				"Divine Fury|Scion|Scion|Inquisitor|Scion|3",
-				"Warding Consumption|Scion|Scion|Inquisitor|Scion|7",
-				"Blessing of the Knight|Scion|Scion|Inquisitor|Scion|14",
+				"Warding Sigil|Scion|Scion|Inquisitor|Scion|7",
+				"Stoic Guardian|Scion|Scion|Inquisitor|Scion|14",
 				"Awakened Form|Scion|Scion|Inquisitor|Scion|20"
 			],
 			"className": "Scion",
@@ -2603,26 +2340,21 @@
 			"source": "Scion",
 			"additionalSpells": [
 				{
-					"expanded": {
+					"prepared": {
 						"3": [
-							"bless",
 							"inflict wounds"
 						],
 						"5": [
-							"magic weapon",
 							"scorching ray"
 						],
 						"9": [
-							"fly",
 							"fireball"
 						],
 						"13": [
-							"ice storm",
 							"fire shield"
 						],
 						"17": [
-							"destructive wave", 
-							"skill empowerment"
+							"destructive wave"
 						]
 					}
 				}
@@ -2631,10 +2363,47 @@
 				"Magus|Scion|Scion|Magus|Scion|3",
 				"Magus Expanded Spell List|Scion|Scion|Magus|Scion|3",
 				"Magus Bonus Proficiencies|Scion|Scion|Magus|Scion|3",
-				"Sacred Arcana|Scion|Scion|Magus|Scion|3",
-				"Arcane Consumption|Scion|Scion|Magus|Scion|7",
-				"Blessing of the Arcanist|Scion|Scion|Magus|Scion|14",
+				"Arcane Blast|Scion|Scion|Magus|Scion|3",
+				"Explosive Sigil|Scion|Scion|Magus|Scion|7",
+				"Advanced Arcana|Scion|Scion|Magus|Scion|14",
 				"Transcendence|Scion|Scion|Magus|Scion|20"
+			],
+			"className": "Scion",
+			"classSource": "Scion"
+		},
+		{
+			"name": "Sin Eater",
+			"shortName": "Sin Eater",
+			"source": "Scion",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"command"
+						],
+						"5": [
+							"ray of enfeeblement"
+						],
+						"9": [
+							"vampiric touch"
+						],
+						"13": [
+							"blight"
+						],
+						"17": [
+							"raise dead"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Sin Eater|Scion|Scion|Sin Eater|Scion|3",
+				"Sin Eater Expanded Spell List|Scion|Scion|Sin Eater|Scion|3",
+				"Sin Eater Bonus Proficiencies|Scion|Scion|Sin Eater|Scion|3",
+				"Retribution|Scion|Scion|Sin Eater|Scion|3",
+				"Merciless Sigil|Scion|Scion|Sin Eater|Scion|7",
+				"Hemomancy|Scion|Scion|Sin Eater|Scion|14",
+				"Hemokinesis|Scion|Scion|Sin Eater|Scion|20"
 			],
 			"className": "Scion",
 			"classSource": "Scion"
